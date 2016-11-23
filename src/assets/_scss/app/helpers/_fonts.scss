@@ -1,0 +1,150 @@
+/*
+    FONTS.CSS
+
+    - Last updated: 02.11.15
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+
+$font-path: "/assets/fonts" !default;
+
+//-----------------------------------------------------------------
+// BEBAS NEUE
+//-----------------------------------------------------------------
+
+@font-face {
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 300;
+    src: url('#{$font-path}/bebas-neue.eot');
+    src: local('☺'),
+        url('#{$font-path}/bebas-neue.woff') format('woff'),
+        url('#{$font-path}/bebas-neue.tff') format('truetype'),
+        url('#{$font-path}/bebas-neue.svg') format('svg');
+}
+
+//-----------------------------------------------------------------
+// AVENIR NEXT CONDENSED
+//-----------------------------------------------------------------
+
+@font-face {
+    font-family: 'Avenir Next Condensed';
+    font-style: normal;
+    font-weight: 300;
+    src: url('#{$font-path}/AvenirNextCondensed-Regular.eot');
+    src: local('☺'),
+        url('#{$font-path}/AvenirNextCondensed-Regular.woff') format('woff'),
+        url('#{$font-path}/AvenirNextCondensed-Regular.ttf') format('truetype'),
+        url('#{$font-path}/AvenirNextCondensed-Regular.svg') format('svg');
+}
+
+//=========================================
+// DEMI BOLD
+//=========================================
+
+@font-face {
+    font-family: 'Avenir Next Condensed';
+    font-style: normal;
+    font-weight: 500;
+    src: url('#{$font-path}/AvenirNextCondensed-DemiBold.eot');
+    src: local('☺'),
+        url('#{$font-path}/AvenirNextCondensed-DemiBold.woff') format('woff'),
+        url('#{$font-path}/AvenirNextCondensed-DemiBold.ttf') format('truetype'),
+        url('#{$font-path}/AvenirNextCondensed-DemiBold.svg') format('svg');
+}
+
+//=========================================
+// BOLD
+//=========================================
+
+@font-face {
+    font-family: 'Avenir Next Condensed';
+    font-style: normal;
+    font-weight: bold;
+    src: url('#{$font-path}/AvenirNextCondensed-Bold.eot');
+    src: local('☺'),
+        url('#{$font-path}/AvenirNextCondensed-Bold.woff') format('woff'),
+        url('#{$font-path}/AvenirNextCondensed-Bold.ttf') format('truetype'),
+        url('#{$font-path}/AvenirNextCondensed-Bold.svg') format('svg');
+}
+
+//=========================================
+// LIGHT
+//=========================================
+
+@font-face {
+    font-family: 'Avenir Next Condensed';
+    font-style: normal;
+    font-weight: light;
+    src: url('#{$font-path}/AvenirNextCondensed-UltraLight.eot');
+    src: local('☺'),
+        url('#{$font-path}/AvenirNextCondensed-UltraLight.woff') format('woff'),
+        url('#{$font-path}/AvenirNextCondensed-UltraLight.ttf') format('truetype'),
+        url('#{$font-path}/AvenirNextCondensed-UltraLight.svg') format('svg');
+}
+
+//-----------------------------------------------------------------
+// AVENIR NEXT
+//-----------------------------------------------------------------
+
+@font-face {
+    font-family: 'Avenir Next';
+    font-style: normal;
+    font-weight: 300;
+    src: url('#{$font-path}/AvenirNext-Regular.eot');
+    src: local('☺'),
+        url('#{$font-path}/AvenirNext-Regular.woff') format('woff'),
+        url('#{$font-path}/AvenirNext-Regular.ttf') format('truetype'),
+        url('#{$font-path}/AvenirNext-Regular.svg') format('svg');
+}
+
+//=========================================
+// DEMI BOLD
+//=========================================
+
+@font-face {
+    font-family: 'Avenir Next';
+    font-style: normal;
+    font-weight: bold;
+    src: url('#{$font-path}/AvenirNext-DemiBold.eot');
+    src: local('☺'),
+        url('#{$font-path}/AvenirNext-DemiBold.woff') format('woff'),
+        url('#{$font-path}/AvenirNext-DemiBold.ttf') format('truetype'),
+        url('#{$font-path}/AvenirNext-DemiBold.svg') format('svg');
+}
+
+//=========================================
+// ITALIC
+//=========================================
+
+@font-face {
+    font-family: 'Avenir Next';
+    font-style: italic;
+    font-weight: 300;
+    src: url('#{$font-path}/AvenirNext-Italic.eot');
+    src: local('☺'),
+        url('#{$font-path}/AvenirNext-Italic.woff') format('woff'),
+        url('#{$font-path}/AvenirNext-Italic.ttf') format('truetype'),
+        url('#{$font-path}/AvenirNext-Italic.svg') format('svg');
+}
+
+//=========================================
+// LIGHT
+//=========================================
+
+@font-face {
+    font-family: 'Avenir Next';
+    font-style: normal;
+    font-weight: 100;
+    src: url('#{$font-path}/AvenirNext-UltraLight.eot');
+    src: local('☺'),
+        url('#{$font-path}/AvenirNext-UltraLight.woff') format('woff'),
+        url('#{$font-path}/AvenirNext-UltraLight.ttf') format('truetype'),
+        url('#{$font-path}/AvenirNext-UltraLight.svg') format('svg');
+}
+
+//=========================================
+//
+//=========================================

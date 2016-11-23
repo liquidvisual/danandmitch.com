@@ -1,0 +1,127 @@
+/*
+    ANIMATION.CSS
+
+    - Last updated: 05.11.16
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// INIT
+//-----------------------------------------------------------------
+
+.lv-page {
+	overflow: hidden;
+}
+
+//-----------------------------------------------------------------
+// 01. SHELF
+//-----------------------------------------------------------------
+
+.has-loaded .nav-channels {
+	transform: translateY(400px);
+
+	@keyframes nav-channels-slide-up {
+	    0%   { transform: translateY(400px); }
+	    50%  { transform: translateY(-50px); }
+	    100% { transform: translateY(0); }
+	}
+	animation: nav-channels-slide-up 0.5s ease 0.5s alternate 1 forwards;
+}
+
+//-----------------------------------------------------------------
+// 02. DAN & MITCH
+//-----------------------------------------------------------------
+
+//=========================================
+// >> DAN
+//=========================================
+
+.has-loaded .character-sprites .sprite-dan-torso {
+	transform: translateY(200%);
+	animation: character-sprite-slide-up 1s ease-out 1s alternate 1 forwards;
+}
+
+//================
+// DAN -- HEAD
+//================
+
+.has-loaded .character-sprites .sprite-dan-head {
+	transform: translateY(200%);
+	animation: character-sprite-head-slide-up 0.7s ease 1s alternate 1 forwards;
+}
+
+//=========================================
+// >> MITCH
+//=========================================
+
+.has-loaded .character-sprites .sprite-mitch-torso {
+	transform: translateY(200%);
+	animation: character-sprite-slide-up 1s ease-out 1.2s alternate 1 forwards;
+}
+
+//================
+// MITCH -- HEAD
+//================
+
+.has-loaded .character-sprites .sprite-mitch-head {
+	transform: translateY(200%);
+	animation: character-sprite-head-slide-up 0.7s ease-out 1.2s alternate 1 forwards;
+}
+
+//-----------------------------------------------------------------
+// 03. SOCIAL MEDIA
+//-----------------------------------------------------------------
+
+.has-loaded .global-header .social-media {
+	opacity: 0;
+	animation: fadeIn 1s ease 1.8s alternate 1 forwards;
+}
+
+//-----------------------------------------------------------------
+// 04. SUBSCRIBE BUTTON
+//-----------------------------------------------------------------
+
+.has-loaded .btn-subscribe {
+	opacity: 0;
+	animation: bounceIn 0.8s ease 1.6s alternate 1 forwards;
+}
+
+//-----------------------------------------------------------------
+// KEYFRAMES
+//-----------------------------------------------------------------
+
+@keyframes character-sprite-head-slide-up {
+    0%   { transform: translateY(120px); }
+    80%  { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes character-sprite-slide-up {
+    0%   { transform: translateY(200%); }
+    70%  { transform: translateY(-10%); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(.3); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 1; }
+  70% { transform: scale(.9); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+//-----------------------------------------------------------------
+// 03. SUBSCRIBE BUTTON
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// 04. DAN & MITCH
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// 05. SOCIAL
+//-----------------------------------------------------------------

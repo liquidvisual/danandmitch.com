@@ -1,0 +1,31 @@
+/*
+    NAV.CSS
+
+    - Last updated: 02.11.16
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+
+$nav-channel-height: rem-calc(210) !default;
+
+//-----------------------------------------------------------------
+// NAV
+//-----------------------------------------------------------------
+
+.nav-channels {
+	padding: rem-calc(25 0); // used to force 40 (45px gap)
+	background: rgba(black, 0.07);
+	box-shadow: 0 calc(#{$nav-channel-height} + 2000px) 0 2000px rgba(black, 0.07); // bleed
+	position: relative;
+	z-index: 1;
+
+	@include media-breakpoint-up(lg) {
+	    height: $nav-channel-height;
+	}
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------

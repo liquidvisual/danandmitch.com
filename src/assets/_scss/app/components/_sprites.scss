@@ -1,0 +1,139 @@
+/*
+    SPRITES.CSS
+
+    - Last updated: 02.11.16
+    - liquidvisual.com
+*/
+//--------------------------------------------------------------------
+// VARIABLES
+//--------------------------------------------------------------------
+//--------------------------------------------------------------------
+// WRAPPER
+//--------------------------------------------------------------------
+
+.character-sprites-wrapper {
+	position: absolute;
+	top: calc(#{$header-height-sm} + #{$spacer-y*2} + #{$hero-caption-height-sm});
+	width: 100%;
+	font-size: rem-calc(11);
+
+	@include media-breakpoint-up(sm) {
+	    font-size: rem-calc(13);
+	}
+
+	@include media-breakpoint-up(md) {
+	    top: calc(#{$header-height-sm} + #{$spacer-y*2} + #{$hero-caption-height-md});
+	    font-size: rem-calc(16);
+	}
+
+	@include media-breakpoint-up(lg) {
+	    position: relative;
+	    top: 0;
+	}
+}
+
+//--------------------------------------------------------------------
+// SPRITES
+//--------------------------------------------------------------------
+
+.character-sprites {
+	position: absolute;
+	bottom: 0;
+	left: $container-gutter/2;
+	width: calc(100% - #{$container-gutter});
+	height: em-calc(340);
+	overflow: hidden;
+	// background: orange;
+
+	@include media-breakpoint-up(md) {
+		left: $container-gutter;
+		width: calc(100% - #{$container-gutter*2});
+	}
+
+	@include media-breakpoint-up(lg) {
+	    left: auto;
+
+	    right: calc(#{$container-gutter} + #{em-calc(42)}); // magic number 42
+	    width: em-calc(500); // ideal width
+	}
+}
+
+//-----------------------------------------------------------------
+// DAN
+//-----------------------------------------------------------------
+
+.sprite-dan-torso {
+	position: absolute;
+	left: 0;
+	bottom: em-calc(-55);
+	width: em-calc(282);
+	height: em-calc(190);
+	background-image: url(/assets/img/layout/sprite-dan-torso@2x.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100%;
+
+	.sprite-dan-head {
+		position: absolute;
+		left: em-calc(60);
+		bottom: em-calc(144);
+		width: em-calc(158);
+		height: em-calc(208);
+		background: url(/assets/img/layout/sprite-dan-head@2x.png) no-repeat center center;
+		background-size: 100%;
+
+		.sprite-dan-head-eyes {
+			position: absolute;
+			top: em-calc(113);
+			left: calc(50% - #{em-calc(33)});
+			width: em-calc(60);
+			height: em-calc(20);
+			background: url(/assets/img/layout/sprite-dan-head-eyes@2x.gif) no-repeat center;
+			background-size: 100%;
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// MITCH
+//-----------------------------------------------------------------
+
+.sprite-mitch-torso {
+	position: absolute;
+	right: 0;
+	bottom: em-calc(-13);
+	width: em-calc(264);
+	height: em-calc(140);
+	background: url(/assets/img/layout/sprite-mitch-torso@2x.png) no-repeat center center;
+	background-size: 100%;
+
+	.sprite-mitch-head {
+		position: absolute;
+		left: em-calc(55);
+		top: em-calc(-147);
+		width: em-calc(144);
+		height: em-calc(190);
+		background: url(/assets/img/layout/sprite-mitch-head@2x.png) no-repeat center center;
+		background-size: 100%;
+
+		.sprite-mitch-head-eyes {
+			position: absolute;
+			top: em-calc(105);
+			left: calc(50% - #{em-calc(30)});
+			width: em-calc(58);
+			height: em-calc(22);
+			background: url(/assets/img/layout/sprite-mitch-head-eyes@2x.gif) no-repeat center;
+			background-size: 100%;
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+//=========================================
+//
+//=========================================

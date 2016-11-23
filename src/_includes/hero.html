@@ -1,0 +1,108 @@
+{% comment %}
+    LIQUIDVISUAL-HERO
+
+    - updated: 03.11.16
+    - notes:
+        * Multiple items in carousel_slides.yml triggers carousel mode
+        * .has-auto-height - caption will detemine height
+        * .has-fixed-height - used for internal pages to set a height
+{% endcomment %}
+
+{% assign settings = site.data.settings %}
+
+<div class="lv-hero-wrapper">
+
+    <!-- HERO -->
+    <div class="lv-hero lv-hero-homepage">
+
+        <!-- HERO ITEM -->
+        <div class="lv-hero-item">
+            <div class="display-table">
+                <div class="display-cell v-align-middle">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 push-lg-6">
+
+                                <div class="lv-hero-item-caption text-xs-center">
+
+                                    <!-- GLOBAL HEADER -->
+                                    <header class="global-header">
+                                        {% include header.html %}
+                                    </header>
+
+                                    <!-- TAGLINE -->
+                                    <h2 class="site-tagline h4 m-b-2">{{ settings.site_tagline }}</h2>
+
+                                    <!-- CTA -->
+                                    <a href="{{ settings.youtube_subscribe }}" class="btn btn-subscribe m-b-2"><i class="fa fa-youtube-play"></i> Subscribe</a>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-6 pull-lg-6">
+
+                                <!-- <div class="lv-hero-item-caption animated fadeInLeft">v -->
+
+                                <div class="media media-feature m-b-2">
+                                    <img width="100%" src="/assets/img/layout/please-stand-by@2x.jpg">
+                                    <!-- <img width="100%" height="300" src="/assets/img/layout/static.gif"> -->
+                                    <iframe id="ytplayer" width="100%" height="390" type="text/html" src="https://www.youtube.com/embed/-XZjPR-wwbg?controls=0&t=31s&showinfo=0&rel=0&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+
+                                        <!-- DAN'S PICK -->
+                                        <figure class="media media-thumb media-thumb-muted media-thumb-play">
+                                            <p><a href="https://youtu.be/kpCoU9_2pJI?list=PLnu_-2Pyhu4Fb7IvvY-Ii8sr-dQBx7aRj"><span class="img">
+                                                <img width="100%" src="/assets/img/content/thumbs/thumb-3.jpg">
+                                            </span></a></p>
+                                            <figcaption class="text-xs-center"><i class="fa fa-thumbs-o-up"></i>&nbsp; <strong>Dan Recommends</strong></figcaption>
+                                        </figure>
+
+                                    </div>
+                                    <div class="col-md-6">
+
+                                        <!-- MITCH'S PICK -->
+                                        <figure class="media-thumb media-thumb-muted media-thumb-play">
+                                            <p><a href="https://youtu.be/-ONNPg7yBcI"><span class="img">
+                                                <img width="100%" src="/assets/img/content/thumbs/thumb-7.jpg">
+                                            </span></a></p>
+                                            <figcaption class="text-xs-center"><i class="fa fa-thumbs-o-up"></i>&nbsp; <strong>Mitch Recommends</strong></figcaption>
+                                        </figure>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div> <!-- /.container -->
+
+                </div> <!-- /.display-cell -->
+            </div> <!-- /.display-table -->
+        </div> <!-- /.lv-hero-item -->
+    </div> <!-- /.lv-hero -->
+</div> <!-- /.lv-hero-wrapper -->
+
+<script>
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    var player;
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('ytplayer', {
+            events: {
+                'onReady': onPlayerReady
+            }
+        });
+    }
+
+    function onPlayerReady() {
+        player.playVideo();
+        // Mute!
+        player.mute();
+    }
+</script>

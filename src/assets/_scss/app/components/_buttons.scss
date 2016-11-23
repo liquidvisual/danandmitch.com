@@ -1,0 +1,180 @@
+/*
+    BUTTONS.CSS
+
+    - Last updated: 02.11.16
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//--------------------------------------------------------------------
+// ALL BUTTONS
+//--------------------------------------------------------------------
+
+.btn:not(.btn-channel) {
+	padding-bottom: rem-calc(6);
+	border-bottom: 3px solid darken($brand-tertiary, 10%); // 3px slightly less than big tiles
+	background: $brand-tertiary;
+	font-family: 'Avenir Next Condensed';
+	font-size: rem-calc(22);
+	font-weight: 500;
+	text-transform: uppercase;
+	color: white;
+	transition: transform ease 300ms, background ease 300ms;
+
+	&:hover {
+		background: lighten($brand-tertiary, 5%);
+		color: white;
+
+		@include media-breakpoint-up(xl) {
+		    transform: scale(1.2);
+		}
+	}
+
+	&:active {
+		position: relative;
+		top: 1px;
+		border-color: transparent;
+	}
+}
+
+//--------------------------------------------------------------------
+// SUBSCRIBE
+//--------------------------------------------------------------------
+
+.btn-subscribe {
+	@include media-breakpoint-down(sm) {
+	    font-size: rem-calc(26) !important;
+	}
+
+	i {
+		position: relative;
+		margin-right: 5px;
+		font-size: rem-calc(25);
+		line-height: 0;
+
+		@include media-breakpoint-up(md) {
+		    top: 2px;
+		}
+	}
+}
+
+//--------------------------------------------------------------------
+// BUTTON CHANNEL
+//--------------------------------------------------------------------
+
+.btn-channel {
+
+	width: 100%;
+	height: rem-calc(94);
+	padding: 0;
+	line-height: rem-calc(94);
+	background: grey;
+	font-family: 'Bebas Neue';
+	font-size: rem-calc(34);
+	font-weight: 500;
+	text-transform: uppercase;
+	color: white !important; // why is firefox doing it?
+	box-shadow: 0 12px 25px 0px rgba(black, 0.16);
+	transition: transform ease 300ms, background-color ease 300ms;
+
+	&:hover {
+		color: white;
+
+		@include media-breakpoint-up(xl) {
+		    transform: scale(1.2);
+		}
+	}
+
+	&:active {
+		position: relative;
+		top: 2px;
+		height: rem-calc(94 - 2);
+		border-width: 2px;
+		color: white;
+	}
+
+	.on {
+		display: inline-block;
+		padding: rem-calc(3);
+		margin-right: 4px;
+		width: rem-calc(44);
+		height: rem-calc(44);
+		line-height: rem-calc(43);
+		text-align: center;
+		border-radius: rem-calc(10);
+		background: white;
+	}
+}
+
+.btn-on-topic {
+	background: $brand-quaternary;
+	border-bottom: 4px solid darken($brand-quaternary, 15%);
+	.on { color: $brand-quaternary; }
+	&:hover { background-color: lighten($brand-quaternary, 5%); }
+}
+
+.btn-on-tech {
+	background: $brand-quinary;
+	border-bottom: 4px solid darken($brand-quinary, 8%);
+	.on { color: $brand-quinary; }
+	&:hover { background-color: lighten($brand-quinary, 5%); }
+}
+
+.btn-on-games {
+	background: $brand-septenary;
+	border-bottom: 4px solid darken($brand-septenary, 20%);
+	.on { color: $brand-septenary; }
+	&:hover { background-color: lighten($brand-septenary, 5%); }
+}
+
+.btn-netflix-binge {
+	background: white url(/assets/img/layout/netflix-binge@2x.png) center center no-repeat;
+	background-size: 90%;
+	border-bottom: 4px solid #cccccc;
+	text-indent: -9999px;
+	// &:hover { background-color: lighten(yellow, 46%); }
+	&:active { background-image: url(/assets/img/layout/netflix-binge@2x.png); background-size: calc(90% + 2px); }
+}
+
+.btn-movie-reviews {
+	background: $gray-dark;
+	border-bottom: 4px solid darken($gray-dark, 15%);
+	line-height: rem-calc(35);
+	&:hover { background-color: lighten($gray-dark, 5%); }
+
+	// .text {
+	// 	// position: relative;
+	// 	// top: 2px;
+	// 	// line-height: 0;
+	// }
+
+	.movie {
+		position: relative;
+		top: 10px;
+		font-size: rem-calc(42);
+		color: $brand-primary;
+	}
+
+	.reviews {
+		position: relative;
+		top: 0px;
+		font-size: rem-calc(30);
+		color: $brand-secondary;
+	}
+}
+
+.btn-show-and-tell {
+	background: $brand-octonary;
+	border-bottom: 4px solid #e26f49;
+	&:hover { background-color: lighten($brand-octonary, 5%); }
+
+	.ampersand {
+		font-family: 'Libre Baskerville';
+		font-size: rem-calc(28);
+	}
+}
+
+//=========================================
+//
+//=========================================

@@ -1,0 +1,79 @@
+/*
+    MEDIA.CSS
+
+    - Last updated: 03.11.16
+    - liquidvisual.com
+*/
+//--------------------------------------------------------------------
+// VARIABLES
+//--------------------------------------------------------------------
+//--------------------------------------------------------------------
+// MEDIA
+//--------------------------------------------------------------------
+
+.media-thumb {
+	.img {
+		position: relative;
+		display: inline-block;
+		box-shadow: 0 2px 8px 0px rgba(black, 0.2);
+	}
+
+	&.media-thumb-muted .img {
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba($gray, 0.4);
+			transition: background ease 300ms;
+		}
+
+		&:hover:after {
+			background: rgba($gray, 0);
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+	    margin-bottom: 0; // MOVE TO SPECIAL? OR HERO?
+	}
+}
+
+//--------------------------------------------------------------------
+//
+//--------------------------------------------------------------------
+
+.media-feature {
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 2px 8px 0px rgba(black, 0.2);
+
+	img {
+		// visibility: hidden;
+	}
+
+	iframe {
+		opacity: 0;
+	}
+
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		transition: opacity 1s ease 3s;
+		opacity: 0;
+	}
+}
+
+.has-loaded .media-feature iframe {
+	opacity: 1;
+}
+
+//--------------------------------------------------------------------
+//
+//--------------------------------------------------------------------
+//=========================================
+//
+//=========================================

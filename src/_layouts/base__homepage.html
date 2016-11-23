@@ -1,0 +1,50 @@
+---
+layout: base
+---
+
+{% assign settings = site.data.settings %}
+{% assign featured = site.data.sitemap[3].children | where: "featured", true %}
+
+{% include hero.html %}
+
+<!-- SPRITES -->
+<div class="character-sprites-wrapper">
+	<div class="container rel">
+		<div class="character-sprites">
+		    <div class="sprite-dan-torso">
+		        <div class="sprite-dan-head">
+		            <div class="sprite-dan-head-eyes"></div>
+		        </div>
+		    </div>
+		    <div class="sprite-mitch-torso">
+		        <div class="sprite-mitch-head">
+		            <div class="sprite-mitch-head-eyes"></div>
+		        </div>
+		    </div>
+		</div> <!-- /.character-sprites -->
+	</div> <!-- /.character-sprites-wrapper -->
+</div> <!-- /.character-sprites-wrapper -->
+
+<!-- NAV CHANNEL -->
+<nav class="nav-channels">
+	<div class="container">
+		<ul class="block-grid-xs-1 block-grid-md-3 block-grid-lg-6 block-grid-xl-6">
+			<li><a target="_blank" class="btn btn-on-topic btn-channel" href="{{ settings.playlists.ON_TOPIC }}"><span class="on">On</span> Topic</a></li>
+			<li><a target="_blank" class="btn btn-on-tech btn-channel" href="{{ settings.playlists.ON_TECH }}"><span class="on">On</span> Tech</a></li>
+			<li><a target="_blank" class="btn btn-on-games btn-channel" href="{{ settings.playlists.ON_GAMES }}"><span class="on">On</span> Games</a></li>
+			<li><a target="_blank" class="btn btn-netflix-binge btn-channel" href="{{ settings.playlists.NETFLIX_BINGE }}">Netflix Binge</a></li>
+			<li>
+				<a target="_self" class="btn btn-movie-reviews btn-channel" href="{{ settings.playlists.MOVIE_REVIEWS }}">
+					<span class="display-table">
+						<span class="display-cell">
+							<span class="text">
+								<span class="movie">Movie</span><br><span class="reviews">Reviews</span>
+							</span>
+						</span>
+					</span>
+				</a>
+			</li>
+			<li><a target="_self" class="btn btn-show-and-tell btn-channel" href="{{ settings.playlists.SHOW_AND_TELL }}">Show<span class="ampersand">&amp;</span>Tell</a></li>
+		</ul>
+	</div>
+</nav>
