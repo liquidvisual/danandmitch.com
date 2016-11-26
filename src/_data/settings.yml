@@ -9,7 +9,7 @@ company: Dan & Mitch Network
 description: Dan & Mitch is a YouTube channel that covers Gaming, Movies and Nerd Culture.
 
 # SITE DEFAULTS
-site_tagline: NEW SHOWS <span class="font-normal">every</span> WEEK
+site_tagline: "NEW SHOWS <span class='font-normal'>every</span> WEEK"
 
 # DEVELOPER
 allow_robots: true

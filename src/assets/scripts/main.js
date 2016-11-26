@@ -16,12 +16,28 @@ $(function() {
         $('input, textarea').placeholder(); // IE9 Patch
     });
 
+    // remove animations
+    var cacheDelay = setTimeout(function(){ $('html').addClass('has-animated'); }, 4000);
+
     //-----------------------------------------------------------------
     // LAUNCH MANAGE ON KEYPRESS
     //-----------------------------------------------------------------
 
     key('⌘+shift+m, ctrl+shift+m', function(){
       window.location = '/manage/';
+    });
+
+    //-----------------------------------------------------------------
+    // Magnific Popup
+    //-----------------------------------------------------------------
+
+    $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+        // disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false
     });
 
     //-----------------------------------------------------------------

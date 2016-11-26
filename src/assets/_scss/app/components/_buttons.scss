@@ -13,6 +13,7 @@
 
 .btn:not(.btn-channel) {
 	padding-bottom: rem-calc(6);
+	border: 0;
 	border-bottom: 3px solid darken($brand-tertiary, 10%); // 3px slightly less than big tiles
 	background: $brand-tertiary;
 	font-family: 'Avenir Next Condensed';

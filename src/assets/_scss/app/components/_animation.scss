@@ -88,6 +88,11 @@
 	animation: bounceIn 0.8s ease 1.6s alternate 1 forwards;
 }
 
+.has-animated .btn-subscribe {
+	animation: none;
+	opacity: 1;
+}
+
 //-----------------------------------------------------------------
 // KEYFRAMES
 //-----------------------------------------------------------------
