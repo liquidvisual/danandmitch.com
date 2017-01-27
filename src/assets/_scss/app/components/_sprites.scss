@@ -68,9 +68,7 @@
 	bottom: em-calc(-55);
 	width: em-calc(282);
 	height: em-calc(190);
-	background-image: url(/assets/img/layout/sprite-dan-torso@2x.png);
-	background-repeat: no-repeat;
-	background-position: center center;
+	background: url(/assets/img/layout/sprite-dan-torso@2x.png) no-repeat center center;
 	background-size: 100%;
 
 	.sprite-dan-head {
@@ -91,6 +89,49 @@
 			background: url(/assets/img/layout/sprite-dan-head-eyes@2x.gif) no-repeat center;
 			background-size: 100%;
 		}
+	}
+}
+
+//=========================================
+// DAN LONG HAIR - just use image overlay to get positioning right
+//=========================================
+
+.has-long-hair .sprite-dan-torso {
+	background: none;
+
+	.sprite-dan-head {
+		position: absolute;
+		left: em-calc(48);
+		bottom: em-calc(143);
+		width: em-calc(506)/2.8; // this is important - uses original width/2
+		height: em-calc(518)/2.8;
+		background: url(/assets/img/layout/sprite-dan-head-long-hair-foreground@2x.png) no-repeat center center;
+		background-size: 100%;
+
+		.sprite-dan-head-eyes {
+			top: em-calc(89);
+			left: calc(50% - #{em-calc(31)});
+		}
+	}
+	.sprite-dan-head-mullet {
+		position: absolute;
+		left: em-calc(48);
+		bottom: em-calc(143);
+		width: em-calc(506)/2.8; // this is important - uses original width/2
+		height: em-calc(518)/2.8;
+		background: url(/assets/img/layout/sprite-dan-head-long-hair-background@2x.png) no-repeat center center;
+		background-size: 100%;
+		z-index: -2;
+	}
+	.sprite-dan-torso-hack {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: url(/assets/img/layout/sprite-dan-torso@2x.png) no-repeat center center;
+		background-size: 100%;
+		z-index: -1;
 	}
 }
 

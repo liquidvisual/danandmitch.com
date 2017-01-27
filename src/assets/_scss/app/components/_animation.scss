@@ -47,7 +47,8 @@
 // DAN -- HEAD
 //================
 
-.has-loaded .character-sprites .sprite-dan-head {
+.has-loaded .character-sprites .sprite-dan-head,
+.has-loaded .character-sprites .sprite-dan-head-mullet { // ** NEW - LONG HAIR **
 	transform: translateY(200%);
 	animation: character-sprite-head-slide-up 0.7s ease 1s alternate 1 forwards;
 }
