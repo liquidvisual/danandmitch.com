@@ -1,9 +1,9 @@
----
+
 layout: internal/post
 date: 2014-03-01
 title: Example content
 categories: jekyll example
----
+
 
 <div class="message"> Howdy! This is an example blog post that shows several
 types of HTML content supported in this theme. </div>

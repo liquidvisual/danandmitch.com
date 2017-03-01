@@ -1,7 +1,7 @@
 /*
     OFF-CANVAS.CSS
 
-    - Last updated: 06.10.16
+    - Last updated: 25.02.17
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -9,12 +9,12 @@
 //-----------------------------------------------------------------
 
 $body-bg: white !default;
-$menu-bg-color: $gray-dark; //#444; //darken($gray-light, 10%);
+$menu-bg-color: #111;
 $menu-width-xs: 260px;
 $menu-width-md: 350px;
-$hamburger-width: 25px;
+$hamburger-width: 28px;
 $hamburger-height: $hamburger-width - $hamburger-width/5;
-$hamburger-slit-height: 3px;
+$hamburger-slit-height: 4px;
 
 //-----------------------------------------------------------------
 // LV PAGE
@@ -22,7 +22,7 @@ $hamburger-slit-height: 3px;
 
 .lv-page {
 	position: relative; // need for z-index
-	// background: $body-bg; // prevent sliding from having showing 'gaps'
+	background: $body-bg; // prevent sliding from having showing 'gaps'
 	transition: transform ease 300ms;
 	min-height: 100vh; // prevent bug look
 	z-index: 1;
@@ -97,7 +97,7 @@ $hamburger-slit-height: 3px;
 		// background: $menu-bg-color;
 		font-family: "FontAwesome";
 		font-size: 25px;
-		font-weight: bold;
+		font-weight: normal;
 		color: darken(white, 50%);
 		text-align: center;
 		cursor: pointer;
@@ -108,14 +108,14 @@ $hamburger-slit-height: 3px;
 	}
 
 	li {
-		border-bottom: 1px solid rgba(black, 0.1);
+		border-bottom: 1px solid rgba(white, 0.1);
 		margin-left: 20px;
 	}
 
 	a {
 		position: relative;
 		display: block;
-		color: white; //#222;
+		color: white;
 		padding: 0 40px 0 0;
 		height: 50px;
 		line-height: 50px;
@@ -132,6 +132,7 @@ $hamburger-slit-height: 3px;
 		top: 0;
 		left: auto;
 		right: 0;
+		color: rgba(white, 0.4);
 		width: $menu-width-xs;
 		height: 100%;
 		background: $menu-bg-color;
@@ -160,7 +161,6 @@ $hamburger-slit-height: 3px;
 		}
 
 		&::before {
-
 			content: attr(data-parent);
 			position: static;
 			padding-left: 40px;
@@ -190,7 +190,7 @@ $hamburger-slit-height: 3px;
 		transform: translateX(-$menu-width-xs);
 
 		@include media-breakpoint-up(md) {
-		    position: fixed; // bc on tablets the header is not fixed, prevents edge case "jump"
+		    // position: fixed; // bc on tablets the header is not fixed, prevents edge case "jump"
 		    // right: 0; // keep for reference
 		    width: 100vw; // savior
 		    transform: translateX(-$menu-width-md);
@@ -248,7 +248,7 @@ $hamburger-slit-height: 3px;
 
 .lv-hamburger {
 	position: relative;
-	display: inline-block;
+	// display: inline-block; // now with flex, unecessary
 	width: $hamburger-width;
 	height: $hamburger-height;
 	cursor: pointer;
@@ -264,11 +264,9 @@ $hamburger-slit-height: 3px;
 	.lv-hamburger-middle,
 	.lv-hamburger-bottom {
 		position: absolute;
-		left: 0;
 		width: 100%;
 		height: $hamburger-slit-height;
 		background: #444;
-		border-radius: 4px;
 
 		@include media-breakpoint-up(md) {
 		    background: white;
@@ -307,20 +305,12 @@ $hamburger-slit-height: 3px;
 
 	.lv-hamburger-middle {
 		display: none;
-		background: red; //rgba(black, 0.5);
+		background: rgba(black, 0.5);
 		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100vh;
 		z-index: 1;
-	}
-
-	.lv-hamburger-hit {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100vh;
 	}
 }

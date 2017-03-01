@@ -13,7 +13,7 @@
 
 .character-sprites-wrapper {
 	position: absolute;
-	top: calc(#{$header-height-sm} + #{$spacer-y*2} + #{$hero-caption-height-sm});
+	top: calc(#{$header-sm-height} + #{$spacer-y*2} + #{$hero-caption-height-sm});
 	width: 100%;
 	font-size: rem-calc(11);
 
@@ -22,7 +22,7 @@
 	}
 
 	@include media-breakpoint-up(md) {
-	    top: calc(#{$header-height-sm} + #{$spacer-y*2} + #{$hero-caption-height-md});
+	    top: calc(#{$header-sm-height} + #{$spacer-y*2} + #{$hero-caption-height-md});
 	    font-size: rem-calc(16);
 	}
 
@@ -80,6 +80,9 @@
 		background: url(/assets/img/layout/sprite-dan-head@2x.png) no-repeat center center;
 		background-size: 100%;
 
+		// SCISSORS EASTER EGG
+		cursor: url(/assets/img/layout/cursor-scissors-2.svg), auto;
+
 		.sprite-dan-head-eyes {
 			position: absolute;
 			top: em-calc(113);
@@ -96,7 +99,7 @@
 // DAN LONG HAIR - just use image overlay to get positioning right
 //=========================================
 
-.has-long-hair .sprite-dan-torso {
+.dan-has-long-hair .sprite-dan-torso {
 	background: none;
 
 	.sprite-dan-head {

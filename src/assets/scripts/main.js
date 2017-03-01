@@ -27,6 +27,10 @@ $(function() {
       window.location = '/manage/';
     });
 
+    key('⌘+shift+p, ctrl+shift+p', function(){
+      window.location = '/the-mitching-hour/';
+    });
+
     //-----------------------------------------------------------------
     // Magnific Popup
     //-----------------------------------------------------------------
@@ -38,6 +42,14 @@ $(function() {
         removalDelay: 160,
         preloader: false,
         fixedContentPos: false
+    });
+
+    //-----------------------------------------------------------------
+    // CUT DAN'S HAIR
+    //-----------------------------------------------------------------
+
+    $('.sprite-dan-head').click(function(){
+        $('html').toggleClass('dan-has-long-hair');
     });
 
     //-----------------------------------------------------------------

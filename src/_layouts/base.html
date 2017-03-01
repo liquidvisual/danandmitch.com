@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<!--[if lt IE 9]>       <html class="lt-ie9"> <![endif]-->
-<!--[if IE 9]>          <html class="lt-ie10"> <![endif]-->
-<!--[if gt IE 9]><!-->  <html class="has-long-hair"> <!--<![endif]-->
-
+<html class="no-js dan-has-long-hair" {{ site.environment }}>
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="x-ua-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <title>
         {% if page.url == '/' %}
@@ -17,7 +14,6 @@
     </title>
 
     <!-- CDN -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,700|Libre+Baskerville">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 
     <!-- FAV ICONS -->
@@ -28,7 +24,9 @@
     <link rel="stylesheet" href="/css/main.css">
     <!-- endbuild -->
 </head>
-<body data-environment="{{ site.environment }}">
+<body class="{{ page.theme }}">
+
+    {% include snippets/loader.html %}
 
     <div class="lv-page">
 
@@ -51,19 +49,7 @@
         {% include snippets/navigation.html %}
     </nav>
 
-    <!-- PAGE LOADER -->
-    <div class="lv-page-loader" data-page-loader>
-        <div class="display-table">
-            <div class="display-table-cell">
-                <div class="lv-spinner">
-                  <div class="lv-spinner-dot-1"></div>
-                  <div class="lv-spinner-dot-2"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--[if lt IE 9]>
+    <!--[if lte IE 9]>
     <div class="lv-alert-bar">
         <p>You're using an outdated browser. Please <a title="Click me, you know you want to." href="http://outdatedbrowser.com">upgrade your browser</a> to improve your experience.</p>
         <span class="lv-alert-bar-close-btn">&times;</span>
@@ -109,12 +95,6 @@
             <p>Your browser has Javascript disabled. Some features may be limited.</p>
         </div>
     </noscript>
-
-    <!-- DELETE BELOW FOR PRODUCTION -->
-    <script>
-        localStorage.setItem("pageURL", "{{ page.url }}");
-        localStorage.setItem("pageNotes", JSON.stringify({{ page.notes | jsonify }}));
-    </script>
 
 </body>
 </html>

@@ -4,12 +4,14 @@ cname: danandmitch.com
 
 # META
 title: Dan & Mitch
-seo_title: Dan & Mitch ON - Games, Movies, Nerd Culture
+title_homepage: Dan & Mitch ON - Games, Movies, Nerd Culture
 company: Dan & Mitch Network
 description: Dan & Mitch is a YouTube channel that covers Gaming, Movies and Nerd Culture.
 
 # SITE DEFAULTS
 site_tagline: "NEW SHOWS <span class='font-normal'>every</span> WEEK"
+site_tagline_TMH: "STARTING <span class='font-normal'>in</span> APRIL"
+site_tagline_TMH_final: "THURSDAYS <span class='font-normal'>at</span> MIDNIGHT"
 
 # DEVELOPER
 allow_robots: true
@@ -28,6 +30,7 @@ offices:
 facebook: https://www.facebook.com/DanAndMitch/
 youtube: https://www.youtube.com/channel/UC4S74VhUhaL1HGv3kxYyH6Q
 youtube_subscribe: https://www.youtube.com/channel/UC4S74VhUhaL1HGv3kxYyH6Q
+youtube_subscribe_tmh: https://www.youtube.com/channel/UCyhc20wvZZ_ODC-EzSErDjg
 google_plus:
 instagram: https://www.instagram.com/danandmitch/
 twitter: http://twitter.com/danandmitch/
@@ -53,4 +56,11 @@ playlists:
   ANOTHER_NERDY_PODCAST: https://www.youtube.com/watch?v=XebwH533TuI&list=PLnu_-2Pyhu4GRBMQqo5sdDUWumAQn0x64
   REACTION: https://www.youtube.com/watch?v=5Iok9GBWkpo&list=PLnu_-2Pyhu4Hcev1V3LOObngv1sBTbfuV
   TOP_TEN: https://www.youtube.com/watch?v=FgsT1xY4q40&list=PLnu_-2Pyhu4GpK6lGu8j6J5zj7gAMRohM
-  REAL_NEWS: https://www.youtube.com/watch?v=hDCH20SzPJk&list=PLnu_-2Pyhu4EsKGP8XwE3wFdJe65Y3SHY
+
+playlists_tmh:
+  MOVIE_NIGHT: N/A
+  JOURNEY_INTO_CHILDHOOD: N/A
+  MIDNIGHT_GAMES: N/A
+  THE_VAULT_OF_FILLER: N/A
+  UP_2_SNUFF: N/A
+  EVIL_READ: N/A

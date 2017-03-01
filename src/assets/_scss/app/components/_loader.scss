@@ -1,7 +1,7 @@
 /*
     LOADER.CSS
 
-    - Last updated: 03.11.16
+    - Last updated: 24.02.17
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -12,44 +12,53 @@
 //-----------------------------------------------------------------
 
 .lv-page-loader {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: $gray-lighter;
-	z-index: 2147483647;
-	transition: opacity ease 1s, visibility ease 1s;
-
-	&.has-loaded {
-		opacity: 0;
-		visibility: hidden;
-	}
-}
-
-.lt-ie10 .lv-page-loader {
-    display: none;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $gray-lighter;
+  z-index: 2147483647;
+  animation: page-loader-fadeout 1s ease 1.2s alternate 1 forwards;
 }
 
 //-----------------------------------------------------------------
-// TABLE CELL
+// DEV LOADER TURNED OFF FOR SPEED
 //-----------------------------------------------------------------
 
-.lv-page-loader .display-table-cell {
-    text-align: center;
+html[data-dev-mode] .lv-page-loader {
+    visibility: hidden;
+}
+
+//-----------------------------------------------------------------
+// DISAPPEAR AFTER DELAY
+//-----------------------------------------------------------------
+
+@keyframes page-loader-fadeout {
+    from {
+        opacity: 1;
+    } to {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 //-----------------------------------------------------------------
 // SPINNER
 //-----------------------------------------------------------------
 
-.lv-spinner {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  margin: 0 auto;
-  animation: sk-rotate 2.0s infinite linear;
+.lv-page-loader-spinner {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    animation: sk-rotate 2.0s infinite linear;
 }
+
+//-----------------------------------------------------------------
+// SPINNER
+//-----------------------------------------------------------------
 
 .lv-spinner-dot-1,
 .lv-spinner-dot-2 {
@@ -79,3 +88,7 @@
     transform: scale(1.0);
   }
 }
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------

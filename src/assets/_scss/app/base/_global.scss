@@ -24,7 +24,7 @@ html, body {
 	background-size: cover;
 
 	@include media-breakpoint-down(md) {
-	    padding-top: calc(#{$header-height-sm} + #{$spacer-y*2});
+	    padding-top: calc(#{$header-sm-height} + #{$spacer-y*2});
 	}
 }
 

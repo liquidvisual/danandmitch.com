@@ -5,6 +5,11 @@ layout: base
 {% assign settings = site.data.settings %}
 {% assign featured = site.data.sitemap[3].children | where: "featured", true %}
 
+<!-- HEADER -->
+<header class="global-header fixed-top hidden-md-up">
+    {% include header.html %}
+</header>
+
 {% include hero.html %}
 
 <!-- SPRITES -->
