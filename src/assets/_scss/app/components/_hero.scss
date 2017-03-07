@@ -2,26 +2,20 @@
     HERO.CSS
 
     - updated: 18.03.16
-    - notes:
-        * liquidvisual recommends bxSlider for hero carousels
-        * fixed overflow problem when removing JS
 */
 //-----------------------------------------------------------------
-// Variables
+// VARIABLES
 //-----------------------------------------------------------------
 
-$hero-height-sm:            auto          !default;
-$hero-height-md:            auto          !default;
-$hero-height-md-fixed:      100vh         !default;
-$hero-height-lg:            rem-calc(600) !default;
+$hero-sm-height:            auto          !default; // IMPORTANT: if carousel slides, you need a fixed height
+$hero-md-height:            auto          !default;
+$hero-md-height-fixed:      100vh         !default;
+$hero-lg-height:            rem-calc(600) !default;
 $nav-channel-height:        rem-calc(210) !default;
-
-$hero-caption-height-sm:    rem-calc(240) !default;
+$hero-caption-sm-height:    rem-calc(240) !default;
 
 //-----------------------------------------------------------------
-// Hero Wrapper
-//
-// Used to align the controls relative to the container
+// HERO WRAPPER
 //-----------------------------------------------------------------
 
 .lv-hero-wrapper {
@@ -29,25 +23,19 @@ $hero-caption-height-sm:    rem-calc(240) !default;
 }
 
 //-----------------------------------------------------------------
-// Hero
-//
-// By design, mobile defaults to 'auto'
+// HERO
 //-----------------------------------------------------------------
 
 .lv-hero {
     position: relative;
-    // border: 1px dashed black;
-    width: 100%; // added last minute - breaking?
-    // overflow: hidden; // causes problems without JS
-    height: $hero-height-sm;
-    @include clearfix();
+    height: $hero-sm-height;
 
     @include media-breakpoint-up(md) {
-        height: $hero-height-md;
+        height: $hero-md-height;
     }
 
     @include media-breakpoint-up(lg) {
-        height: $hero-height-lg;
+        height: $hero-lg-height;
     }
 
     //=========================================
@@ -67,7 +55,7 @@ $hero-caption-height-sm:    rem-calc(240) !default;
     //=========================================
 
     &.has-fixed-height {
-        height: rem-calc(150); //$hero-height-sm;
+        height: rem-calc(150); //$hero-sm-height;
         background-position: center center;
 
         @include media-breakpoint-up(md) { // added - refactor
@@ -75,16 +63,16 @@ $hero-caption-height-sm:    rem-calc(240) !default;
         }
 
         @include media-breakpoint-up(xl) {
-           height: $hero-height-md-fixed;
+           height: $hero-md-height-fixed;
         }
     }
 }
 
 //-----------------------------------------------------------------
-// Offset Media
+// OFFSET MEDIA
 //-----------------------------------------------------------------
 
-.lv-hero-homepage > .lv-hero-item > .display-table > .display-cell > .container > .row {
+.lv-hero-homepage > .lv-hero-item > .container > .row {
     > .pull-lg-6 {
         @include media-breakpoint-up(lg) {
             padding-right: rem-calc(70);
@@ -94,54 +82,34 @@ $hero-caption-height-sm:    rem-calc(240) !default;
 }
 
 //-----------------------------------------------------------------
-// Hero Item (Slides)
+// HERO ITEM
 //-----------------------------------------------------------------
 
 .lv-hero-item {
-    float: left;
-    width: 100%; // need
+    display: flex;
+    align-items: center;
+    width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    // padding-bottom: $nav-channel-height; // added
-
-    //=========================================
-    // For Positioning Captions
-    //=========================================
-
-    .lv-hero-item-table {
-        display: table;
-        width: 100%;
-        height: 100%;
-        position: relative;
-
-        .lv-hero-item-cell {
-            display: table-cell;
-
-            @include media-breakpoint-up(md) {
-                vertical-align: middle;
-            }
-        }
-    }
 }
 
 //-----------------------------------------------------------------
-// Hero - Caption
+// HERO CAPTION
 //-----------------------------------------------------------------
 
 .lv-hero-item-caption {
     display: block;
     position: relative;
     width: 100%; // mobile
-    height: $hero-caption-height-sm;
+    height: $hero-caption-sm-height;
     // background: rgba(aqua, 0.3);
-    // overflow: hidden;
     z-index: 1;
 
     @include media-breakpoint-up(md) {
         top: -$spacer-y*2;
-        height: $hero-caption-height-md;
+        height: $hero-caption-md-height;
     }
 
     @include media-breakpoint-up(lg) {

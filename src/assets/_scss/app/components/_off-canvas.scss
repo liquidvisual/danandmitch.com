@@ -9,7 +9,7 @@
 //-----------------------------------------------------------------
 
 $body-bg: white !default;
-$menu-bg-color: #111;
+$menu-bg-color: $gray-dark;
 $menu-width-xs: 260px;
 $menu-width-md: 350px;
 $hamburger-width: 28px;
@@ -22,10 +22,10 @@ $hamburger-slit-height: 4px;
 
 .lv-page {
 	position: relative; // need for z-index
-	background: $body-bg; // prevent sliding from having showing 'gaps'
+	// background: $body-bg !default; // prevent sliding from having showing 'gaps'
 	transition: transform ease 300ms;
 	min-height: 100vh; // prevent bug look
-	z-index: 1;
+	// z-index: 1;
 }
 
 //-----------------------------------------------------------------
@@ -41,6 +41,7 @@ $hamburger-slit-height: 4px;
 	height: 100%;
 	overflow: hidden;
 	transition: right 0ms ease 300ms; // for hiding
+	z-index: -1;
 
 	@include media-breakpoint-up(md) {
 	    width: $menu-width-md;

@@ -20,14 +20,17 @@
 //-----------------------------------------------------------------
 
 .has-loaded .nav-channels {
-	transform: translateY(400px);
+	transform: translateY(400px); // fallback
+	transform: translateY(calc(-100% + 100vh));
 
 	@keyframes nav-channels-slide-up {
-	    0%   { transform: translateY(400px); }
+	    0%   { transform: translateY(calc(-100% + 100vh)); }
 	    50%  { transform: translateY(-50px); }
 	    100% { transform: translateY(0); }
 	}
 	animation: nav-channels-slide-up 0.5s ease 0.5s alternate 1 forwards;
+
+
 }
 
 //-----------------------------------------------------------------
@@ -106,7 +109,7 @@
 
 @keyframes character-sprite-slide-up {
     0%   { transform: translateY(200%); }
-    70%  { transform: translateY(-10%); }
+    70%  { transform: translateY(-9%); }
     100% { transform: translateY(0); }
 }
 

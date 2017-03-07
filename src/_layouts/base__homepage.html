@@ -5,11 +5,6 @@ layout: base
 {% assign settings = site.data.settings %}
 {% assign featured = site.data.sitemap[3].children | where: "featured", true %}
 
-<!-- HEADER -->
-<header class="global-header fixed-top hidden-md-up">
-    {% include header.html %}
-</header>
-
 {% include hero.html %}
 
 <!-- SPRITES -->
@@ -17,15 +12,15 @@ layout: base
 	<div class="container rel">
 		<div class="character-sprites">
 		    <div class="sprite-dan-torso">
-		        <div class="sprite-dan-head">
-		            <div class="sprite-dan-head-eyes"></div>
+		        <div class="sprite-dan-head layer" data-depth="0.06">
+		            <div class="sprite-dan-head-eyes layer" data-depth="0.1"></div>
 		        </div>
 		        <div class="sprite-dan-torso-hack"></div>
-		        <div class="sprite-dan-head-mullet"></div>
+		        <div class="sprite-dan-head-mullet layer" data-depth="0.1"></div>
 		    </div>
 		    <div class="sprite-mitch-torso">
-		        <div class="sprite-mitch-head">
-		            <div class="sprite-mitch-head-eyes"></div>
+		        <div class="sprite-mitch-head layer" data-depth="0.12">
+		            <div class="sprite-mitch-head-eyes layer" data-depth="0.11"></div>
 		        </div>
 		    </div>
 		</div> <!-- /.character-sprites -->

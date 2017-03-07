@@ -123,7 +123,7 @@ $spacer-y: $spacer !default;
 // //
 // // Settings for the `<body>` element.
 
-// $body-bg:    #fff !default;
+$body-bg:    $gray-lighter; //#fff !default;
 // $body-color: $gray-dark !default;
 
 

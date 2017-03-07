@@ -7,7 +7,7 @@
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <title>
         {% if page.url == '/' %}
-            {{ site.data.settings.seo_title }}
+            {{ site.data.settings.title_homepage }}
         {% else %}
             {{ page.title }} - {{ site.data.settings.title }}
         {% endif %}
@@ -51,7 +51,7 @@
 
     <!--[if lte IE 9]>
     <div class="lv-alert-bar">
-        <p>You're using an outdated browser. Please <a title="Click me, you know you want to." href="http://outdatedbrowser.com">upgrade your browser</a> to improve your experience.</p>
+        <p>Hey Grandpa! You're using a dinosaur browser. Go <a title="Click me, you know you want to." href="http://outdatedbrowser.com">upgrade your browser</a> right now!</p>
         <span class="lv-alert-bar-close-btn">&times;</span>
     </div>
     <![endif]-->
@@ -75,9 +75,32 @@
     <script src="/assets/webvisual/assets/scripts/liquidvisual/key.js"></script>
 
     <script src="/assets/scripts/vendor/headroom.js"></script>
+
     <script src="/assets/scripts/off-canvas.js"></script>
     <script src="/assets/scripts/main.js"></script>
     <!-- endbuild -->
+
+    <script>
+
+        // DAN PARALLAX
+        // var target = $('.sprite-dan-torsoX')[0];
+        // var parallax = new Parallax(target, {
+        //     invertX: false,
+        //     invertY: false,
+        //     limitX: 15,
+        //     limitY: 15,
+        // });
+
+        // // MITCH PARALLAX
+        // var target = $('.sprite-mitch-torsoX')[0];
+        // var parallax = new Parallax(target, {
+        //     invertX: false,
+        //     invertY: true,
+        //     limitX: 10,
+        //     limitY: 20,
+        // });
+
+    </script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
