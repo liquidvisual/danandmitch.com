@@ -1,116 +1,77 @@
 <!DOCTYPE html>
-
-<!--[if lt IE 9]>       <html class="lt-ie9"> <![endif]-->
-
-<!--[if IE 9]>          <html class="lt-ie10"> <![endif]-->
-<!--[if gt IE 9]><!--><html class="has-long-hair">
-
-<!--<![endif]-->
+<html class="no-js dan-has-long-hair">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta http-equiv="x-ua-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="">
-    <title>Dan & Mitch ON - Games, Movies, Nerd Culture</title>
+    <title>Dan & Mitch ON - Games, Movies, Nerd Culture, YouTube</title>
 
     <!-- CDN -->
-    
-<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,700|Libre+Baskerville"> --><script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 
     <!-- FAV ICONS -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-144-precomposed.png">
     <link rel="shortcut icon" href="/assets/favicon.ico">
     <link rel="stylesheet" href="/assets/css/minified.css">
 </head>
-<body data-environment="production" class="">
+<body class="">
+
+    <!-- PAGE LOADER -->
+    <div id="lv-page-loader" class="lv-page-loader">
+        <div class="lv-page-loader-spinner">
+            <div class="lv-spinner-dot-1"></div>
+            <div class="lv-spinner-dot-2"></div>
+        </div>
+    </div>
+
+    <!-- WON'T SHOW IF JAVASCRIPT IS DISABLED -->
+    <script>
+    var loader = document.getElementById('lv-page-loader');
+    loader.style.display = 'flex';
+    // Prevent loader from getting stuck if body takes too long
+    setTimeout(function() {
+        loader.className += ' force-finish';
+    }, 3100);
+    </script>
     <div class="lv-page">
+        <div class="grain-bg"></div>
 
         <!-- HEADER -->
         <header class="global-header fixed-top hidden-md-up">
             <div class="container">
-                <div class="display-table">
-                    <div class="display-cell">
 
-                        <!-- LOGO -->
-                        <a class="logo" href="/" title="Dan & Mitch ON - Games, Movies, Nerd Culture" itemprop="url">
-                            <img src="/assets/img/content/logo@2x.png" alt="" itemprop="logo">
-                            <span class="on">
-                                <img src="/assets/img/layout/on-even@2x.png">
-                            </span>
-                        </a>
+                <!-- LOGO -->
+                <a class="logo" href="/" title="Dan & Mitch ON - Games, Movies, Nerd Culture, YouTube" itemprop="url">
+                    <img src="/assets/img/content/logo@2x.png" alt="Dan & Mitch Network" itemprop="logo">
+                    <span class="on">
+                        <img src="/assets/img/layout/on-even@2x.png">
+                    </span>
+                </a>
 
-                        <!-- HAMBURGER -->
-                        <div class="global-mobile-menu hidden-md-up">
-                            <div class="lv-hamburger" data-menu-toggle>
-                                <span class="lv-hamburger-top"></span>
-                                <span class="lv-hamburger-middle"></span>
-                                <span class="lv-hamburger-bottom"></span>
-                            </div>
-                        </div>
-
-                        <!-- SOCIAL MEDIA -->
-                        <div class="social-media hidden-md-down">
-                            <a class="twitter" title="twitter" href="http://twitter.com/danandmitch/">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                            <a class="facebook" title="facebook" href="https://www.facebook.com/DanAndMitch/">
-                                <i class="fa fa-facebook-square"></i>
-                            </a>
-                            <a class="instagram" title="instagram" href="https://www.instagram.com/danandmitch/">
-                                <i class="fa fa-instagram"></i>
-                            </a>
-                            <a class="youtube" title="youtube" href="https://www.youtube.com/channel/UC4S74VhUhaL1HGv3kxYyH6Q">
-                                <i class="fa fa-youtube-square"></i>
-                            </a>
-                        </div>
-
-                        <!-- NOTE: Change _SELF to _BLANK -->
-                        </div>
+                <!-- HAMBURGER -->
+                <div class="global-header-hamburger hidden-md-up">
+                    <div class="lv-hamburger" data-menu-toggle>
+                        <span class="lv-hamburger-top"></span>
+                        <span class="lv-hamburger-middle"></span>
+                        <span class="lv-hamburger-bottom"></span>
+                        <span class="lv-hamburger-hit"></span>
+                    </div>
                 </div>
-            </div>
-        </header>
 
-        <!-- HEADER -->
-        <header class="global-header fixed-top hidden-md-up">
-            <div class="container">
-                <div class="display-table">
-                    <div class="display-cell">
-
-                        <!-- LOGO -->
-                        <a class="logo" href="/" title="Dan & Mitch ON - Games, Movies, Nerd Culture" itemprop="url">
-                            <img src="/assets/img/content/logo@2x.png" alt="" itemprop="logo">
-                            <span class="on">
-                                <img src="/assets/img/layout/on-even@2x.png">
-                            </span>
-                        </a>
-
-                        <!-- HAMBURGER -->
-                        <div class="global-mobile-menu hidden-md-up">
-                            <div class="lv-hamburger" data-menu-toggle>
-                                <span class="lv-hamburger-top"></span>
-                                <span class="lv-hamburger-middle"></span>
-                                <span class="lv-hamburger-bottom"></span>
-                            </div>
-                        </div>
-
-                        <!-- SOCIAL MEDIA -->
-                        <div class="social-media hidden-md-down">
-                            <a class="twitter" title="twitter" href="http://twitter.com/danandmitch/">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                            <a class="facebook" title="facebook" href="https://www.facebook.com/DanAndMitch/">
-                                <i class="fa fa-facebook-square"></i>
-                            </a>
-                            <a class="instagram" title="instagram" href="https://www.instagram.com/danandmitch/">
-                                <i class="fa fa-instagram"></i>
-                            </a>
-                            <a class="youtube" title="youtube" href="https://www.youtube.com/channel/UC4S74VhUhaL1HGv3kxYyH6Q">
-                                <i class="fa fa-youtube-square"></i>
-                            </a>
-                        </div>
-
-                        <!-- NOTE: Change _SELF to _BLANK -->
-                        </div>
+                <!-- SOCIAL MEDIA -->
+                <div class="social-media hidden-md-down">
+                    <a class="twitter" target="_blank" title="twitter" href="http://twitter.com/danandmitch/">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a class="facebook" target="_blank" title="facebook" href="https://www.facebook.com/DanAndMitch/">
+                        <i class="fa fa-facebook-square"></i>
+                    </a>
+                    <a class="instagram" target="_blank" title="instagram" href="https://www.instagram.com/danandmitch/">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                    <a class="youtube" target="_blank" title="youtube" href="https://www.youtube.com/channel/UC4S74VhUhaL1HGv3kxYyH6Q">
+                        <i class="fa fa-youtube-square"></i>
+                    </a>
                 </div>
             </div>
         </header>
@@ -121,123 +82,111 @@
 
                 <!-- HERO ITEM -->
                 <div class="lv-hero-item">
-                    <div class="display-table">
-                        <div class="display-cell v-align-middle">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-6 push-lg-6">
-                                        <div class="lv-hero-item-caption text-xs-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 push-lg-6">
+                                <div class="lv-hero-item-caption text-xs-center">
 
-                                            <!-- GLOBAL HEADER -->
-                                            <header class="global-header">
-                                                <div class="container">
-                                                    <div class="display-table">
-                                                        <div class="display-cell">
+                                    <!-- change this to non-global  -->
+                                    
+<!-- GLOBAL HEADER --><header class="global-header hidden-sm-down">
+                                        <div class="container">
 
-                                                            <!-- LOGO -->
-                                                            <a class="logo" href="/" title="Dan & Mitch ON - Games, Movies, Nerd Culture" itemprop="url">
-                                                                <img src="/assets/img/content/logo@2x.png" alt="" itemprop="logo">
-                                                                <span class="on">
-                                                                    <img src="/assets/img/layout/on-even@2x.png">
-                                                                </span>
-                                                            </a>
+                                            <!-- LOGO -->
+                                            <a class="logo" href="/" title="Dan & Mitch ON - Games, Movies, Nerd Culture, YouTube" itemprop="url">
+                                                <img src="/assets/img/content/logo@2x.png" alt="Dan & Mitch Network" itemprop="logo">
+                                                <span class="on">
+                                                    <img src="/assets/img/layout/on-even@2x.png">
+                                                </span>
+                                            </a>
 
-                                                            <!-- HAMBURGER -->
-                                                            <div class="global-mobile-menu hidden-md-up">
-                                                                <div class="lv-hamburger" data-menu-toggle>
-                                                                    <span class="lv-hamburger-top"></span>
-                                                                    <span class="lv-hamburger-middle"></span>
-                                                                    <span class="lv-hamburger-bottom"></span>
-                                                                </div>
-                                                            </div>
-
-                                                            <!-- SOCIAL MEDIA -->
-                                                            <div class="social-media hidden-md-down">
-                                                                <a class="twitter" title="twitter" href="http://twitter.com/danandmitch/">
-                                                                    <i class="fa fa-twitter"></i>
-                                                                </a>
-                                                                <a class="facebook" title="facebook" href="https://www.facebook.com/DanAndMitch/">
-                                                                    <i class="fa fa-facebook-square"></i>
-                                                                </a>
-                                                                <a class="instagram" title="instagram" href="https://www.instagram.com/danandmitch/">
-                                                                    <i class="fa fa-instagram"></i>
-                                                                </a>
-                                                                <a class="youtube" title="youtube" href="https://www.youtube.com/channel/UC4S74VhUhaL1HGv3kxYyH6Q">
-                                                                    <i class="fa fa-youtube-square"></i>
-                                                                </a>
-                                                            </div>
-
-                                                            <!-- NOTE: Change _SELF to _BLANK -->
-                                                            </div>
-                                                    </div>
+                                            <!-- HAMBURGER -->
+                                            <div class="global-header-hamburger hidden-md-up">
+                                                <div class="lv-hamburger" data-menu-toggle>
+                                                    <span class="lv-hamburger-top"></span>
+                                                    <span class="lv-hamburger-middle"></span>
+                                                    <span class="lv-hamburger-bottom"></span>
+                                                    <span class="lv-hamburger-hit"></span>
                                                 </div>
-                                            </header>
+                                            </div>
 
-                                            <!-- TAGLINE -->
-                                            <h2 class="site-tagline h4 m-b-2">NEW SHOWS
-                                                <span class="font-normal">every</span> WEEK</h2>
-
-                                            <!-- CTA -->
-                                            <a href="https://www.youtube.com/channel/UC4S74VhUhaL1HGv3kxYyH6Q" class="btn btn-subscribe m-b-2">
-                                                <i class="fa fa-youtube-play"></i> Subscribe</a>
+                                            <!-- SOCIAL MEDIA -->
+                                            <div class="social-media hidden-md-down">
+                                                <a class="twitter" target="_blank" title="twitter" href="http://twitter.com/danandmitch/">
+                                                    <i class="fa fa-twitter"></i>
+                                                </a>
+                                                <a class="facebook" target="_blank" title="facebook" href="https://www.facebook.com/DanAndMitch/">
+                                                    <i class="fa fa-facebook-square"></i>
+                                                </a>
+                                                <a class="instagram" target="_blank" title="instagram" href="https://www.instagram.com/danandmitch/">
+                                                    <i class="fa fa-instagram"></i>
+                                                </a>
+                                                <a class="youtube" target="_blank" title="youtube" href="https://www.youtube.com/channel/UC4S74VhUhaL1HGv3kxYyH6Q">
+                                                    <i class="fa fa-youtube-square"></i>
+                                                </a>
+                                            </div>
                                         </div>
+                                    </header>
+
+                                    <!-- TAGLINE -->
+                                    <h2 class="site-tagline h4 m-b-2">NEW SHOWS
+                                        <span class="font-normal">every</span> DECADE</h2>
+
+                                    <!-- CTA -->
+                                    <a href="https://www.youtube.com/channel/UC4S74VhUhaL1HGv3kxYyH6Q" class="btn btn-subscribe m-b-2">
+                                        <i class="fa fa-youtube-play"></i> Subscribe</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 pull-lg-6">
+
+                                <!-- MEDIA FEATURE -->
+                                <div class="media media-feature m-b-2">
+                                    <img width="100%" src="/assets/img/layout/please-stand-by@2x.jpg">
+
+                                    <!-- LATEST VIDEO -->
+                                    <iframe id="ytplayer" width="100%" height="390" type="text/html" src="https://www.youtube.com/embed/9SnjPZaFd7Y?controls=0&t=31s&showinfo=0&rel=0&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+
+                                        <!-- DAN'S PICK -->
+                                        <figure class="media media-thumb media-thumb-muted media-thumb-play">
+                                            <p>
+                                                <a class="popup-youtube" href="http://www.youtube.com/watch?v=vgs2_dZ9di4">
+                                                    <span class="img">
+                                                        <img width="100%" src="/assets/img/content/thumbs/thumb-6.jpg">
+                                                    </span>
+                                                </a>
+                                            </p>
+                                            <figcaption class="text-xs-center">
+                                                <i class="fa fa-thumbs-o-up"></i>&nbsp;
+                                                <strong>Dan Recommends</strong>
+                                            </figcaption>
+                                        </figure>
                                     </div>
-                                    <div class="col-lg-6 pull-lg-6">
+                                    <div class="col-md-6">
 
-                                        <!-- <div class="lv-hero-item-caption animated fadeInLeft">v -->
-                                        <div class="media media-feature m-b-2">
-                                            <img width="100%" src="/assets/img/layout/please-stand-by@2x.jpg">
-
-                                            <!-- <img width="100%" height="300" src="/assets/img/layout/static.gif"> -->
-                                            <iframe id="ytplayer" width="100%" height="390" type="text/html" src="https://www.youtube.com/embed/3UHV2x252aA?controls=0&t=31s&showinfo=0&rel=0&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-
-                                                <!-- DAN'S PICK -->
-                                                <figure class="media media-thumb media-thumb-muted media-thumb-play">
-                                                    <p>
-                                                        <a class="popup-youtube" href="http://www.youtube.com/watch?v=kpCoU9_2pJI">
-                                                            <span class="img">
-                                                                <img width="100%" src="/assets/img/content/thumbs/thumb-6.jpg">
-                                                            </span>
-                                                        </a>
-                                                    </p>
-                                                    <figcaption class="text-xs-center">
-                                                        <i class="fa fa-thumbs-o-up"></i>&nbsp;
-                                                        <strong>Dan Recommends</strong>
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-                                            <div class="col-md-6">
-
-                                                <!-- MITCH'S PICK -->
-                                                <figure class="media-thumb media-thumb-muted media-thumb-play">
-                                                    <p>
-                                                        <a class="popup-youtube" href="http://www.youtube.com/watch?v=-ONNPg7yBcI">
-                                                            <span class="img">
-                                                                <img width="100%" src="/assets/img/content/thumbs/thumb-2.jpg">
-                                                            </span>
-                                                        </a>
-                                                    </p>
-                                                    <figcaption class="text-xs-center">
-                                                        <i class="fa fa-thumbs-o-up"></i>&nbsp;
-                                                        <strong>Mitch Recommends</strong>
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-                                        </div>
+                                        <!-- MITCH'S PICK -->
+                                        <figure class="media-thumb media-thumb-muted media-thumb-play">
+                                            <p>
+                                                <a class="popup-youtube" href="http://www.youtube.com/watch?v=8TkRs1JTNdo">
+                                                    <span class="img">
+                                                        <img width="100%" src="/assets/img/content/thumbs/thumb-2.jpg">
+                                                    </span>
+                                                </a>
+                                            </p>
+                                            <figcaption class="text-xs-center">
+                                                <i class="fa fa-thumbs-o-up"></i>&nbsp;
+                                                <strong>Mitch Recommends</strong>
+                                            </figcaption>
+                                        </figure>
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- /.container -->
-                            </div>
-
-                        <!-- /.display-cell -->
                         </div>
+                    </div>
 
-                    <!-- /.display-table -->
+                    <!-- /.container -->
                     </div>
 
                 <!-- /.lv-hero-item -->
@@ -273,15 +222,15 @@
             <div class="container rel">
                 <div class="character-sprites">
                     <div class="sprite-dan-torso">
-                        <div class="sprite-dan-head">
-                            <div class="sprite-dan-head-eyes"></div>
+                        <div class="sprite-dan-head layer" data-depth="0.06">
+                            <div class="sprite-dan-head-eyes layer" data-depth="0.1"></div>
                         </div>
                         <div class="sprite-dan-torso-hack"></div>
-                        <div class="sprite-dan-head-mullet"></div>
+                        <div class="sprite-dan-head-mullet layer" data-depth="0.1"></div>
                     </div>
                     <div class="sprite-mitch-torso">
-                        <div class="sprite-mitch-head">
-                            <div class="sprite-mitch-head-eyes"></div>
+                        <div class="sprite-mitch-head layer" data-depth="0.12">
+                            <div class="sprite-mitch-head-eyes layer" data-depth="0.11"></div>
                         </div>
                     </div>
                 </div>
@@ -354,6 +303,11 @@
                 </a>
             </li>
             <li class="">
+                <a class="top-parent-anchor" href="https://www.youtube.com/channel/UCJlhzJCa5Xnl6Aj-9_1gfrg">
+                    <span class="text">Another Nerdy Podcast</span>
+                </a>
+            </li>
+            <li class="">
                 <a class="top-parent-anchor" href="/the-mitching-hour/">
                     <span class="text">The Mitching Hour</span>
                 </a>
@@ -361,21 +315,9 @@
         </ul>
     </nav>
 
-    <!-- PAGE LOADER -->
-    <div class="lv-page-loader" data-page-loader>
-        <div class="display-table">
-            <div class="display-table-cell">
-                <div class="lv-spinner">
-                    <div class="lv-spinner-dot-1"></div>
-                    <div class="lv-spinner-dot-2"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--[if lt IE 9]>
+    <!--[if lte IE 9]>
     <div class="lv-alert-bar">
-        <p>You're using an outdated browser. Please <a title="Click me, you know you want to." href="http://outdatedbrowser.com">upgrade your browser</a> to improve your experience.</p>
+        <p>Hey Grandpa! You're using a dinosaur browser. Go <a title="Click me, you know you want to." href="http://outdatedbrowser.com">upgrade your browser</a> right now!</p>
         <span class="lv-alert-bar-close-btn">&times;</span>
     </div>
     <![endif]-->
@@ -404,11 +346,5 @@
             <p>Your browser has Javascript disabled. Some features may be limited.</p>
         </div>
     </noscript>
-
-    <!-- DELETE BELOW FOR PRODUCTION -->
-    <script>
-    localStorage.setItem("pageURL", "/");
-    localStorage.setItem("pageNotes", JSON.stringify(null));
-    </script>
 </body>
 </html>
