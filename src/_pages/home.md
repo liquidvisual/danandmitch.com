@@ -1,5 +1,5 @@
 ---
-layout: base__homepage
+layout: dmo/base__homepage
 title: Homepage
 permalink: /
 regenerate: true

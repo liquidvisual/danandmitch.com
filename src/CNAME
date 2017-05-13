@@ -2,4 +2,4 @@
 output: true
 permalink: ./CNAME
 ---
-{{site.data.settings.cname}}
+{{site.data.dmo.settings.cname}}

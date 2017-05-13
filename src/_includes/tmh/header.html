@@ -1,0 +1,32 @@
+{% assign settings = site.data.tmh.settings %}
+{% assign logo = "/assets/img/tmh/content/logo-TMH@2x.png" %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-6">
+
+            <!-- LOGO -->
+            <a class="logo" href="/" title="{{ settings.title_homepage }}" itemprop="url">
+                <img src="{{ logo }}" alt="{{ settings.company }}" itemprop="logo">
+            </a>
+
+            <!-- HAMBURGER -->
+            <div class="global-mobile-menu hidden-md-up">
+                <div class="lv-hamburger" data-menu-toggle>
+                    <span class="lv-hamburger-top"></span>
+                    <span class="lv-hamburger-middle"></span>
+                    <span class="lv-hamburger-bottom"></span>
+                </div>
+            </div>
+
+            <!-- SOCIAL MEDIA -->
+            <ul class="social-media hidden-md-down">
+                <li><a class="twitter" target="_blank" title="twitter" href="{{ settings.twitter }}"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="facebook" target="_blank" title="facebook" href="{{ settings.facebook }}"><i class="fa fa-facebook-square"></i></a></li>
+                <li><a class="instagram" target="_blank" title="instagram" href="{{ settings.instagram }}"><i class="fa fa-instagram"></i></a></li>
+                <li><a class="youtube" target="_blank" title="youtube" href="{{ settings.youtube }}"><i class="fa fa-youtube-square"></i></a></li>
+            </ul>
+
+        </div>
+    </div>
+</div>

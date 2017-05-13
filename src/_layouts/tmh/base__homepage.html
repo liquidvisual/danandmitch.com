@@ -1,0 +1,53 @@
+---
+layout: base
+---
+
+{% assign settings = site.data.settings %}
+{% assign featured = site.data.sitemap[3].children | where: "featured", true %}
+
+{% include tmh/hero.html %}
+
+<!-- COUCH MAN -->
+<div class="couch-man">
+	<div class="container rel">
+		<img class="img" src="/assets/img/tmh/layout/couch-man@2x.png" alt="Couch Man">
+	</div> <!-- /.container -->
+</div> <!-- /.couch-man -->
+
+<!-- NAV CHANNEL -->
+<nav class="nav-channels">
+	<div class="container">
+		<ul class="block-grid-xs-1 block-grid-md-3 block-grid-lg-6 block-grid-xl-6">
+			<li><a target="_blank" class="btn btn-movie-night btn-channel" href="{{ settings.playlists_tmh.MOVIE_NIGHT }}"></a></li>
+			<li><a target="_blank" class="btn btn-journey-into-childhood btn-channel" href="{{ settings.playlists_tmh.JOURNEY_INTO_CHILDHOOD }}"></a></li>
+			<li><a target="_blank" class="btn btn-midnight-games btn-channel" href="{{ settings.playlists_tmh.MIDNIGHT_GAMES }}"></a></li>
+			<li><a target="_blank" class="btn btn-the-vault-of-filler btn-channel" href="{{ settings.playlists_tmh.THE_VAULT_OF_FILLER }}"></a></li>
+			<li><a target="_blank" class="btn btn-up-2-snuff btn-channel" href="{{ settings.playlists_tmh.UP_2_SNUFF }}"></a></li>
+			<li><a target="_blank" class="btn btn-evil-read btn-channel" href="{{ settings.playlists_tmh.EVIL_READ }}"></a></li>
+		</ul>
+	</div>
+</nav>
+
+{% comment %}
+<!-- SECTION -->
+<section class="section">
+	{{ content }}
+</section>
+
+<!-- SECTION -->
+<section class="section section-image" style="background-image: url(/assets/img/layout/section-bg.png)">
+</section>
+
+<!-- CONTENT -->
+<main class="page-content-container">
+    <!-- <div class="page-content-container-bleed" data-parallax-scroll="0.2"></div> -->
+    <div class="container">
+        <div class="page-content">
+            <!-- { % include snippets/breadcrumb.html %} -->
+            {{ content }}
+        </div>
+    </div>
+</main>
+
+
+{% endcomment %}

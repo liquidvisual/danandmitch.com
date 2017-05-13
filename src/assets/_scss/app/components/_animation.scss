@@ -12,7 +12,7 @@
 //-----------------------------------------------------------------
 
 .lv-page {
-	overflow: hidden;
+	overflow: hidden; // put this in global
 }
 
 //-----------------------------------------------------------------
@@ -29,8 +29,6 @@
 	    100% { transform: translateY(0); }
 	}
 	animation: nav-channels-slide-up 0.5s ease 0.5s alternate 1 forwards;
-
-
 }
 
 //-----------------------------------------------------------------

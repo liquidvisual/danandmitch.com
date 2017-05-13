@@ -1,0 +1,53 @@
+# GLOBAL SITE SETTINGS
+
+cname: themitchinghour.com
+
+# META
+title: The Mitching Hour
+title_homepage: The Mitching Hour - A Ghoulish Weekly YouTube Show
+company: liquidvisual
+description: The Mitching Hour is a horror themed YouTube channel that covers Movies and pop culture.
+
+# SITE DEFAULTS
+site_tagline: "STARTING <span class='font-normal'>in</span> JULY"
+site_tagline_final: "THURSDAYS <span class='font-normal'>at</span> MIDNIGHT"
+
+# DEVELOPER
+allow_robots: true
+github_repo_owner: liquidvisual
+github_repo_path: https://github.com/liquidvisual/themitchinghour.com
+github_repo_name: themitchinghour.com
+jekyll_version: 3.0.3
+
+# OFFICES
+offices:
+  - title: Sydney
+    address: N/A
+    email:
+
+# SOCIAL MEDIA
+facebook:
+youtube:
+youtube_subscribe: https://www.youtube.com/channel/UCyhc20wvZZ_ODC-EzSErDjg
+google_plus:
+instagram:
+twitter:
+
+# GOOGLE
+google_analytics: "UA-XXXXXXXX-X"
+
+# AUTHOR
+author:
+  title: Mitch
+  url: http://liquidvisual.com
+  logo: /assets/img/ui/liquidvisual-logo.svg
+  description: Site by liquidvisual
+
+# PLAYLISTS
+playlists:
+  MOVIE_NIGHT: N/A
+  JOURNEY_INTO_CHILDHOOD: N/A
+  MIDNIGHT_GAMES: N/A
+  THE_VAULT_OF_FILLER: N/A
+  UP_2_SNUFF: N/A
+  EVIL_READ: N/A

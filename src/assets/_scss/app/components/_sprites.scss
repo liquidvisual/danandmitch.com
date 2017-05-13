@@ -59,7 +59,6 @@
 
 	@include media-breakpoint-up(lg) {
 	    left: auto;
-
 	    right: calc(#{$container-gutter} + #{em-calc(42)}); // magic number 42
 	    width: em-calc(500); // ideal width
 	}
@@ -75,7 +74,7 @@
 	bottom: em-calc(-55);
 	width: em-calc(282);
 	height: em-calc(190);
-	background: url(/assets/img/layout/sprite-dan-torso@2x.svg) no-repeat center center;
+	background: url(/assets/img/dmo/layout/sprite-dan-torso@2x.svg) no-repeat center center;
 	background-size: 100%;
 
 	.sprite-dan-head {
@@ -84,11 +83,11 @@
 		bottom: em-calc(144);
 		width: em-calc(158);
 		height: em-calc(208);
-		background: url(/assets/img/layout/sprite-dan-head@2x.svg) no-repeat center center;
+		background: url(/assets/img/dmo/layout/sprite-dan-head@2x.svg) no-repeat center center;
 		background-size: 100%;
 
 		// SCISSORS EASTER EGG
-		cursor: url(/assets/img/layout/cursor-scissors-2.svg), auto;
+		cursor: url(/assets/img/dmo/layout/cursor-scissors-2.svg), auto;
 
 		.sprite-dan-head-eyes {
 			position: absolute;
@@ -96,7 +95,7 @@
 			left: calc(50% - #{em-calc(33)});
 			width: em-calc(60);
 			height: em-calc(20);
-			background: url(/assets/img/layout/sprite-dan-head-eyes@2x.gif) no-repeat center;
+			background: url(/assets/img/dmo/layout/sprite-dan-head-eyes@2x.gif) no-repeat center;
 			background-size: 100%;
 		}
 	}
@@ -106,7 +105,7 @@
 // DAN LONG HAIR - just use image overlay to get positioning right
 //=========================================
 
-.dan-has-long-hair .sprite-dan-torso {
+.sprite-dan-torso.has-long-hair {
 	background: none;
 
 	.sprite-dan-head {
@@ -115,7 +114,7 @@
 		bottom: em-calc(143);
 		width: em-calc(506)/2.8; // this is important - uses original width/2
 		height: em-calc(518)/2.8;
-		background: url(/assets/img/layout/sprite-dan-head-long-hair-foreground@2x.svg) no-repeat center center;
+		background: url(/assets/img/dmo/layout/sprite-dan-head-long-hair-foreground@2x.svg) no-repeat center center;
 		background-size: 100%;
 
 		.sprite-dan-head-eyes {
@@ -129,7 +128,7 @@
 		bottom: em-calc(143);
 		width: em-calc(506)/2.8; // this is important - uses original width/2
 		height: em-calc(518)/2.8;
-		background: url(/assets/img/layout/sprite-dan-head-long-hair-background@2x.svg) no-repeat center center;
+		background: url(/assets/img/dmo/layout/sprite-dan-head-long-hair-background@2x.svg) no-repeat center center;
 		background-size: 100%;
 		z-index: -2;
 	}
@@ -139,7 +138,7 @@
 		top: 0;
 		width: 100%;
 		height: 100%;
-		background: url(/assets/img/layout/sprite-dan-torso@2x.svg) no-repeat center center;
+		background: url(/assets/img/dmo/layout/sprite-dan-torso@2x.svg) no-repeat center center;
 		background-size: 100%;
 		z-index: -1;
 	}
@@ -155,7 +154,7 @@
 	bottom: em-calc(-13);
 	width: em-calc(264);
 	height: em-calc(140);
-	background: url(/assets/img/layout/sprite-mitch-torso@2x.svg) no-repeat center center;
+	background: url(/assets/img/dmo/layout/sprite-mitch-torso@2x.svg) no-repeat center center;
 	background-size: 100%;
 
 	.sprite-mitch-head {
@@ -164,7 +163,7 @@
 		top: em-calc(-147);
 		width: em-calc(144);
 		height: em-calc(190);
-		background: url(/assets/img/layout/sprite-mitch-head@2x.svg) no-repeat center center;
+		background: url(/assets/img/dmo/layout/sprite-mitch-head@2x.svg) no-repeat center center;
 		background-size: 100%;
 
 		.sprite-mitch-head-eyes {
@@ -173,7 +172,7 @@
 			left: calc(50% - #{em-calc(30)});
 			width: em-calc(58);
 			height: em-calc(22);
-			background: url(/assets/img/layout/sprite-mitch-head-eyes@2x.gif) no-repeat center;
+			background: url(/assets/img/dmo/layout/sprite-mitch-head-eyes@2x.gif) no-repeat center;
 			background-size: 100%;
 		}
 	}

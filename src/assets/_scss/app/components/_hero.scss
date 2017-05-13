@@ -38,34 +38,7 @@ $hero-caption-sm-height:    rem-calc(240) !default;
         height: $hero-lg-height;
     }
 
-    //=========================================
-    // Has Auto Height
-    //
-    // * Will override above at all sizes
-    // * Height determined by inner caption
-    //=========================================
-
-    &.has-auto-height {
-        height: auto;
-    }
-    //=========================================
-    // Has Fixed Height
-    //
-    // * Used on internal pages to set a height
-    //=========================================
-
-    &.has-fixed-height {
-        height: rem-calc(150); //$hero-sm-height;
-        background-position: center center;
-
-        @include media-breakpoint-up(md) { // added - refactor
-           height: rem-calc(300);
-        }
-
-        @include media-breakpoint-up(xl) {
-           height: $hero-md-height-fixed;
-        }
-    }
+    // INSERT HEIGHT PRESET
 }
 
 //-----------------------------------------------------------------
@@ -100,20 +73,16 @@ $hero-caption-sm-height:    rem-calc(240) !default;
 //-----------------------------------------------------------------
 
 .lv-hero-item-caption {
-    display: block;
     position: relative;
-    width: 100%; // mobile
     height: $hero-caption-sm-height;
-    // background: rgba(aqua, 0.3);
-    z-index: 1;
 
     @include media-breakpoint-up(md) {
-        top: -$spacer-y*2;
+        top: $spacer-y*2;
         height: $hero-caption-md-height;
     }
 
     @include media-breakpoint-up(lg) {
-        top: $spacer-y;
+        top: $spacer-y * 6;
     }
 }
 

@@ -65,7 +65,9 @@
 //--------------------------------------------------------------------
 
 .btn-channel {
-
+	display: block;
+	// align-items: center;
+	// justify-content: center;
 	width: 100%;
 	height: rem-calc(94);
 	padding: 0;
@@ -130,12 +132,12 @@
 }
 
 .btn-netflix-binge {
-	background: white url(/assets/img/layout/netflix-binge@2x.png) center center no-repeat;
+	background: white url(/assets/img/dmo/layout/netflix-binge@2x.png) center center no-repeat;
 	background-size: 90%;
 	border-bottom: 4px solid #cccccc;
 	text-indent: -9999px;
 	// &:hover { background-color: lighten(yellow, 46%); }
-	&:active { background-image: url(/assets/img/layout/netflix-binge@2x.png); background-size: calc(90% + 2px); }
+	&:active { background-image: url(/assets/img/dmo/layout/netflix-binge@2x.png); background-size: calc(90% + 2px); }
 }
 
 .btn-movie-reviews {

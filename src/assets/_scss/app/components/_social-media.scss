@@ -14,13 +14,19 @@
 .social-media {
 	position: absolute;
 	top: 60px;
-	right: 0;
+	right: 10px;
 	width: 139px;
 	height: 236px;
+	list-style: none;
+	padding: 0;
+
+	li {
+		padding: 0;
+	}
 
 	a {
 		position: relative;
-		display: block;
+		display: inline-block;
 		color: $gray;
 		font-size: rem-calc(50);
 	}
@@ -31,14 +37,12 @@
 //-----------------------------------------------------------------
 
 .global-header .social-media {
-
 	top: 0;
 
 	.twitter,
 	.facebook,
 	.instagram,
 	.youtube {
-		position: relative;
 		transition: transform ease 300ms, color ease 300ms;
 
 		&:hover {

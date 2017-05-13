@@ -19,6 +19,13 @@
 	position: relative;
 }
 
+
+// prevent layer stacking glitch
+.layer {
+	-webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+}
+
 //-----------------------------------------------------------------
 //
 //-----------------------------------------------------------------

@@ -54,7 +54,9 @@ $header-lg-height: auto !default;
 	z-index: 999;
 
 	@include media-breakpoint-up(md) {
-	    position: relative;
+	    // position: relative;
+	    position: absolute;
+	    top: rem-calc(70);
 	    margin-bottom: $spacer-y/2; // Make room for tagline
 	    text-align: center;
 	    background: none;
@@ -70,6 +72,7 @@ $header-lg-height: auto !default;
 		display: flex;
 		height: $header-sm-height;
 		align-items: center;
+		justify-content: center;
 
 		@include media-breakpoint-up(md) {
 			display: block;
@@ -78,6 +81,16 @@ $header-lg-height: auto !default;
 
 		@include media-breakpoint-up(lg) {
 			height: $header-lg-height;
+		}
+
+		// MOBILE VIEW
+		> .row,
+		> .row > div {
+			@include media-breakpoint-down(sm) {
+			    display: flex;
+			    width: 100%;
+			    // text-align: center;
+			}
 		}
 	}
 }
@@ -161,7 +174,10 @@ $header-lg-height: auto !default;
 //-----------------------------------------------------------------
 
 .global-header-hamburger {
-	// margin: auto 0 auto auto;
+	position: relative;
+	left: 15px;
+	margin-top: auto;
+	margin-bottom: auto;
 }
 
 //=========================================

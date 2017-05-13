@@ -3,4 +3,4 @@ output: true
 ---
 
 User-agent: *
-{% if site.data.settings.allow_robots %}Allow: /{% else %}Disallow: /{% endif %}
+{% if site.data.dmo.settings.allow_robots %}Allow: /{% else %}Disallow: /{% endif %}
