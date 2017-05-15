@@ -47,10 +47,10 @@
 	// transform: rotate(0.01);
 	transform: translateZ(0); // fixes glitch in safari
 
-	* {
-		// transform: rotate(0.01);
-		// transform: translateZ(0);
-	}
+	// * {
+	// 	// transform: rotate(0.01);
+	// 	// transform: translateZ(0);
+	// }
 
 	@include media-breakpoint-up(md) {
 		left: $container-gutter;

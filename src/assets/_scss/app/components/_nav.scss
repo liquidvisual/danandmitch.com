@@ -1,7 +1,7 @@
 /*
     NAV.CSS
 
-    - Last updated: 02.11.16
+    - Last updated: 15.05.17
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -11,14 +11,13 @@
 $nav-channel-height: rem-calc(210) !default;
 
 //-----------------------------------------------------------------
-// NAV
+// NAV CHANNELS
 //-----------------------------------------------------------------
 
 .nav-channels {
 	position: relative;
 	padding: rem-calc(25 0); // used to force 40 (45px gap)
 	background: rgba(black, 0.07);
-	// box-shadow: 0 calc(#{$nav-channel-height} + 2000px) 0 2000px rgba(black, 0.07); // bleed
 	z-index: 1;
 
 	&:after {
@@ -34,10 +33,186 @@ $nav-channel-height: rem-calc(210) !default;
 
 	@include media-breakpoint-up(lg) {
 	    height: $nav-channel-height;
-	    // height: 1000px;
 	}
 }
 
-//-----------------------------------------------------------------
-//
-//-----------------------------------------------------------------
+//--------------------------------------------------------------------
+// BUTTON CHANNEL
+//--------------------------------------------------------------------
+
+.btn-channel {
+	display: block;
+	width: 100%;
+	line-height: rem-calc(94);
+	font-family: 'Bebas Neue';
+	font-size: rem-calc(34);
+	font-weight: 500;
+	text-transform: uppercase;
+	color: white !important; // why is firefox doing it?
+	text-align: center;
+
+	//=========================================
+	// LAYER
+	//=========================================
+
+	.atvImg-layers .atvImg-rendered-layer {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.text {
+			line-height: rem-calc(35);
+			display: inline-block;
+		}
+
+		.on {
+			display: inline-block;
+			padding: rem-calc(3);
+			margin-right: 4px;
+			width: rem-calc(44);
+			height: rem-calc(44);
+			line-height: rem-calc(43);
+			text-align: center;
+			border-radius: rem-calc(10);
+			background: white;
+		}
+	}
+}
+
+//=========================================
+// ON TOPIC
+//=========================================
+
+.btn-on-topic {
+	.atvImg-layers {
+		border-bottom: 4px solid darken($brand-quaternary, 15%);
+
+		.atvImg-rendered-layer.is-bg {
+			background-color: $brand-quaternary;
+		}
+		.on {
+			color: $brand-quaternary;
+		}
+	}
+}
+
+//=========================================
+// ON TECH
+//=========================================
+
+.btn-on-tech {
+	.atvImg-layers {
+		border-bottom: 4px solid darken($brand-quinary, 15%);
+
+		.atvImg-rendered-layer.is-bg {
+		    background-color: $brand-quinary;
+		}
+
+		.on {
+			color: $brand-quinary;
+		}
+	}
+}
+
+//=========================================
+// ON GAMES
+//=========================================
+
+.btn-on-games {
+	.atvImg-layers {
+		border-bottom: 4px solid darken($brand-septenary, 15%);
+
+		.atvImg-rendered-layer.is-bg {
+		    background-color: $brand-septenary;
+		}
+
+		.on {
+			color: $brand-septenary;
+		}
+	}
+}
+
+//=========================================
+// NETFLIX BINGE
+//=========================================
+
+.btn-netflix-binge {
+	.atvImg-layers {
+		border-bottom: 4px solid darken(white, 15%);
+
+		.atvImg-rendered-layer.is-bg {
+	    	background-color: white;
+		}
+
+		.atvImg-rendered-layer {
+			background-size: 90%;
+			background-position: center center;
+		}
+	}
+}
+
+//=========================================
+// MOVIE REVIEWS
+//=========================================
+
+.btn-movie-reviews {
+	.atvImg-layers {
+	    border-bottom: 4px solid darken($gray-dark, 15%);
+
+	    .atvImg-rendered-layer.is-bg {
+	        background-color: $gray-dark;
+	    }
+
+    	.atvImg-rendered-layer {
+    	    .movie {
+        		position: relative;
+        		top: rem-calc(11);
+        		font-size: rem-calc(42);
+        		color: $brand-primary;
+        	}
+
+        	.reviews {
+        		position: relative;
+        		top: 0px;
+        		font-size: rem-calc(30);
+        		color: $brand-secondary;
+        	}
+    	}
+	}
+}
+
+//=========================================
+// SHOW AND TELL
+//=========================================
+
+.btn-show-and-tell {
+	.atvImg-layers {
+	    border-bottom: 4px solid #e26f49; //darken($brand-octonary, 15%);
+
+	    .atvImg-rendered-layer.is-bg {
+	    	background-color: $brand-octonary;
+	    }
+
+	    .atvImg-rendered-layer {
+
+	        .text {
+    	    	position: relative;
+    	    	top: 2px; // magic
+    	    }
+
+    	    .ampersand {
+        		font-family: 'Libre Baskerville';
+        		font-size: rem-calc(28);
+        		line-height: 0;
+        	}
+	    }
+	}
+}
+
+//--------------------------------------------------------------------
+// NO JS
+//--------------------------------------------------------------------
+
+.no-js .btn-channel {
+	display: none;
+}
