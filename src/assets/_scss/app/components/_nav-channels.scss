@@ -59,23 +59,24 @@ $nav-channel-height: rem-calc(210) !default;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		background-size: rem-calc(175); // set image size
 
-		.text {
-			line-height: rem-calc(35);
-			display: inline-block;
-		}
+		// .text {
+		// 	line-height: rem-calc(35);
+		// 	display: inline-block;
+		// }
 
-		.on {
-			display: inline-block;
-			padding: rem-calc(3);
-			margin-right: 4px;
-			width: rem-calc(44);
-			height: rem-calc(44);
-			line-height: rem-calc(43);
-			text-align: center;
-			border-radius: rem-calc(10);
-			background: white;
-		}
+		// .on {
+		// 	display: inline-block;
+		// 	padding: rem-calc(3);
+		// 	margin-right: 4px;
+		// 	width: rem-calc(44);
+		// 	height: rem-calc(44);
+		// 	line-height: rem-calc(43);
+		// 	text-align: center;
+		// 	border-radius: rem-calc(10);
+		// 	background: white;
+		// }
 	}
 }
 
@@ -96,6 +97,11 @@ $nav-channel-height: rem-calc(210) !default;
 	}
 }
 
+// NO JS FALLBACK -------------------------
+.no-js .btn-on-topic img {
+	background-color: $brand-quaternary;
+	border-bottom: 4px solid darken($brand-quaternary, 15%);
+}
 //=========================================
 // ON TECH
 //=========================================
@@ -114,6 +120,11 @@ $nav-channel-height: rem-calc(210) !default;
 	}
 }
 
+// NO JS FALLBACK -------------------------
+.no-js .btn-on-tech img {
+	background-color: $brand-quinary;
+	border-bottom: 4px solid darken($brand-quinary, 15%);
+}
 //=========================================
 // ON GAMES
 //=========================================
@@ -132,6 +143,11 @@ $nav-channel-height: rem-calc(210) !default;
 	}
 }
 
+// NO JS FALLBACK -------------------------
+.no-js .btn-on-games img {
+	background-color: $brand-septenary;
+	border-bottom: 4px solid darken($brand-septenary, 15%);
+}
 //=========================================
 // NETFLIX BINGE
 //=========================================
@@ -151,6 +167,13 @@ $nav-channel-height: rem-calc(210) !default;
 	}
 }
 
+// NO JS FALLBACK -------------------------
+.no-js .btn-netflix-binge img {
+	background-color: white;
+	border-bottom: 4px solid darken(white, 15%);
+	height: 94px;
+	width: 100%;
+}
 //=========================================
 // MOVIE REVIEWS
 //=========================================
@@ -181,6 +204,11 @@ $nav-channel-height: rem-calc(210) !default;
 	}
 }
 
+// NO JS FALLBACK -------------------------
+.no-js .btn-movie-reviews img {
+	background-color: $gray-dark;
+	border-bottom: 4px solid darken($gray-dark, 15%);
+}
 //=========================================
 // SHOW AND TELL
 //=========================================
@@ -209,10 +237,11 @@ $nav-channel-height: rem-calc(210) !default;
 	}
 }
 
-//--------------------------------------------------------------------
-// NO JS
-//--------------------------------------------------------------------
-
-.no-js .btn-channel {
-	display: none;
+// NO JS FALLBACK -------------------------
+.no-js .btn-show-and-tell img {
+	background-color: $brand-octonary;
+	border-bottom: 4px solid #e26f49;
 }
+//--------------------------------------------------------------------
+//
+//--------------------------------------------------------------------

@@ -154,14 +154,11 @@ body.theme-tmh {
 .theme-tmh .nav-channels,
 .theme-tmh .nav-channels:after {
 	background: rgba(black, 0.09);
-	// background-color: rgba(black, 0.10);
-	// box-shadow: 0 calc(#{$nav-channel-height} + 2000px) 0 2000px rgba(black, 0.10); // bleed
 }
 
 .theme-tmh .nav-channels {
 	@include media-breakpoint-up(lg) {
 	    height: $nav-channel-height + 2;
-	    // height: 1000px;
 	}
 }
 
@@ -172,12 +169,6 @@ body.theme-tmh {
 .theme-tmh {
 
 	.atvImg-container.over .atvImg-shadow {
-	    // box-shadow: 0 45px 100px rgba(black,0.2), 0 16px 40px rgba(black,0.2);
-	}
-
-	.atvImg-container.over .atvImg-shadow {
-	    // box-shadow: 0 45px 100px rgba(black,0.4), 0 16px 40px rgba(black,0.4); // bad for firefox
-	    // opacity: 1;
 	    opacity: 0.6;
 	    transform: scale(1);
 	}
@@ -185,13 +176,12 @@ body.theme-tmh {
 	.atvImg-shadow {
 	    box-shadow: 0 8px 30px rgba(black,0.4);
 	}
-
 	//=========================================
 	// MOVIE NIGHT
 	//=========================================
 
 	.btn-movie-night {
-		.atvImg-layers .atvImg-rendered-layer:first-child {
+		.atvImg-layers .atvImg-rendered-layer.is-bg {
 		    background-color: $brand-secondary-tmh;
 		}
 
@@ -199,13 +189,12 @@ body.theme-tmh {
 		    border-bottom: 4px solid darken($brand-secondary-tmh, 15%);
 		}
 	}
-
 	//=========================================
 	// JOURNEY INTO CHILDHOOD
 	//=========================================
 
 	.btn-journey-into-childhood {
-		.atvImg-layers .atvImg-rendered-layer:first-child {
+		.atvImg-layers .atvImg-rendered-layer.is-bg {
 		    background-color: $brand-tertiary-tmh;
 		}
 
@@ -213,13 +202,12 @@ body.theme-tmh {
 		    border-bottom: 4px solid darken($brand-tertiary-tmh, 15%);
 		}
 	}
-
 	//=========================================
 	// MIDNIGHT GAMES
 	//=========================================
 
 	.btn-midnight-games {
-		.atvImg-layers .atvImg-rendered-layer:first-child {
+		.atvImg-layers .atvImg-rendered-layer.is-bg {
 		    background-color: $brand-quaternary-tmh;
 		}
 
@@ -227,13 +215,12 @@ body.theme-tmh {
 		    border-bottom: 4px solid darken($brand-quaternary-tmh, 15%);
 		}
 	}
-
 	//=========================================
 	// VAULT OF FILLER
 	//=========================================
 
 	.btn-the-vault-of-filler {
-		.atvImg-layers .atvImg-rendered-layer:first-child {
+		.atvImg-layers .atvImg-rendered-layer.is-bg {
 		    background-color: $brand-quinary-tmh;
 		}
 
@@ -242,18 +229,17 @@ body.theme-tmh {
 		}
 
 		&:hover {
-			.atvImg-layers .atvImg-rendered-layer:first-child {
+			.atvImg-layers .atvImg-rendered-layer.is-bg {
 			    background-color: lighten(saturate($brand-quinary-tmh, 15%), 5%);
 			}
 		}
 	}
-
 	//=========================================
 	// UP TO SNUFF
 	//=========================================
 
 	.btn-up-2-snuff {
-		.atvImg-layers .atvImg-rendered-layer:first-child {
+		.atvImg-layers .atvImg-rendered-layer.is-bg {
 		    background-color: $brand-septenary-tmh;
 		}
 
@@ -261,13 +247,12 @@ body.theme-tmh {
 		    border-bottom: 4px solid #836150; //darken($brand-septenary-tmh, 15%);
 		}
 	}
-
 	//=========================================
 	// EVIL READ
 	//=========================================
 
 	.btn-evil-read {
-		.atvImg-layers .atvImg-rendered-layer:first-child {
+		.atvImg-layers .atvImg-rendered-layer.is-bg {
 		    background-color: $brand-octonary-tmh;
 		}
 
@@ -277,6 +262,41 @@ body.theme-tmh {
 	}
 }
 
+// NO JS FALLBACK -------------------------
+.no-js .btn-movie-night img {
+	background-color: $brand-secondary-tmh;
+	border-bottom: 4px solid darken($brand-secondary-tmh, 15%);
+}
+
+// NO JS FALLBACK -------------------------
+.no-js .btn-journey-into-childhood img {
+	background-color: $brand-tertiary-tmh;
+	border-bottom: 4px solid darken($brand-tertiary-tmh, 15%);
+}
+
+// NO JS FALLBACK -------------------------
+.no-js .btn-midnight-games img {
+	background-color: $brand-quaternary-tmh;
+	border-bottom: 4px solid darken($brand-quaternary-tmh, 15%);
+}
+
+// NO JS FALLBACK -------------------------
+.no-js .btn-the-vault-of-filler img {
+	background-color: $brand-quinary-tmh;
+	border-bottom: 4px solid darken($brand-quinary-tmh, 15%);
+}
+
+// NO JS FALLBACK -------------------------
+.no-js .btn-up-2-snuff img {
+	background-color: $brand-septenary-tmh;
+	border-bottom: 4px solid #836150;
+}
+
+// NO JS FALLBACK -------------------------
+.no-js .btn-evil-read img {
+	background-color: $brand-octonary-tmh;
+	border-bottom: 4px solid #484848;
+}
 //=========================================
 //
 //=========================================

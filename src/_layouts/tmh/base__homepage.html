@@ -4,10 +4,9 @@ layout: base
 
 {% assign settings = site.data.settings %}
 {% assign featured = site.data.sitemap[3].children | where: "featured", true %}
+{% assign channels = site.data.tmh.channels %}
 
 {% include tmh/hero.html %}
-
-{% assign playlists = site.data.tmh.playlists %}
 
 <!-- COUCH MAN -->
 <div class="couch-man">
@@ -16,14 +15,14 @@ layout: base
 	</div>
 </div>
 
-<!-- NAV CHANNELS -->
+<!-- CHANNELS -->
 <nav class="nav-channels">
 	<div class="container">
 		<ul class="block-grid-xs-1 block-grid-md-3 block-grid-lg-6 block-grid-xl-6">
-			{% for item in playlists | limit: 6 %}
+			{% for item in channels | limit: 6 %}
 				<li>
 					<a class="atvImg {{ item.class }}" target="_self" href="{{ item.url }}">
-						<!-- <img width="100%" src="http://placehold.it/700x360"> -->
+						<img width="100%" src="{{ item.image }}" alt="{{ item.title }}">
 						<div class="atvImg-layer is-bg"></div>
 						<div class="atvImg-layer is-static" data-img="/assets/img/tmh/layout/static-4.gif"></div>
 						<div class="atvImg-layer is-fg" data-img="{{ item.image }}"></div>
@@ -32,9 +31,4 @@ layout: base
 			{% endfor %}
 		</ul>
 	</div>
-
-	<!-- NO JAVASCRIPT WARNING -->
-	<noscript>
-		<h3 class="text-center"><i class="fa fa-warning"></i> Playlists can't load without JavaScript</h3>
-	</noscript>
 </nav>

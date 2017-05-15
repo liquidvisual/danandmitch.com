@@ -4,7 +4,7 @@ layout: base
 
 {% assign settings = site.data.settings %}
 {% assign featured = site.data.sitemap[3].children | where: "featured", true %}
-{% assign playlists = site.data.dmo.playlists %}
+{% assign channels = site.data.dmo.channels %}
 
 {% include dmo/hero.html %}
 
@@ -32,24 +32,15 @@ layout: base
 <nav class="nav-channels">
 	<div class="container">
 		<ul class="block-grid-xs-1 block-grid-md-3 block-grid-lg-6 block-grid-xl-6">
-			{% for item in playlists | limit: 6 %}
+			{% for item in channels | limit: 6 %}
 				<li>
 					<a class="atvImg btn-channel {{ item.class }}" target="_self" href="{{ item.url }}">
-						<!-- <img width="100%" src="http://placehold.it/700x360?text={{item.html_text | upcase | strip_html }}"> -->
+						<img width="100%" src="{{ item.image }}" alt="{{ item.title }}">
 						<div class="atvImg-layer is-bg"></div>
-						<div class="atvImg-layer is-fg" data-img="{{ item.image }}">
-							<div class="text">
-								{{ item.html_text }}
-							</div>
-						</div>
+						<div class="atvImg-layer is-fg" data-img="{{ item.image }}"></div>
 					</a>
 				</li>
 			{% endfor %}
 		</ul>
 	</div>
-
-	<!-- NO JAVASCRIPT WARNING -->
-	<noscript>
-		<h3 class="text-center"><i class="fa fa-warning"></i> Playlists can't load without JavaScript</h3>
-	</noscript>
 </nav>

@@ -1,12 +1,13 @@
 {% assign settings = site.data.dmo.settings %}
 {% assign logo = "/assets/img/dmo/content/logo@2x.png" %}
+{% capture logo_path %}{% if site.environment == 'data-dev-mode' %}/the-mitching-hour/{% else %}/{% endif %}{% endcapture %}
 
 <div class="container">
     <div class="row">
         <div class="col-lg-6 offset-lg-6">
 
             <!-- LOGO -->
-            <a class="logo" href="/the-mitching-hour/" title="{{ settings.title_homepage }}" itemprop="url">
+            <a class="logo" href="{{ logo_path }}" title="{{ settings.title_homepage }}" itemprop="url">
                 <img src="{{ logo }}" alt="{{ settings.company }}" itemprop="logo">
                 <span class="on"><img src="/assets/img/dmo/layout/on-even@2x.png"></span>
             </a>
