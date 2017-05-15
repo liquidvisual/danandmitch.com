@@ -1,0 +1,41 @@
+# PLAYLISTS
+
+- title: On Topic
+  url: https://www.youtube.com/watch?v=Ng6GxPEs5Uc&list=PLnu_-2Pyhu4EoL_AT8ogXGmdawDi9tAV8
+  image: null
+  class: btn-on-topic
+  html_text: <span class="on">On</span> TOPIC
+
+- title: On Tech
+  url: https://www.youtube.com/watch?v=22XqmGdfyRs&list=PLnu_-2Pyhu4EssVi3zpUGsTSs5kowIcLM
+  image: null
+  class: btn-on-tech
+  html_text: <span class="on">On</span> TECH
+
+- title: On Games
+  url: https://www.youtube.com/watch?v=kpCoU9_2pJI&list=PLnu_-2Pyhu4Fb7IvvY-Ii8sr-dQBx7aRj
+  image: null
+  class: btn-on-games
+  html_text: <span class="on">On</span> GAMES
+
+- title: Netflix Binge
+  url: https://www.youtube.com/watch?v=tQVYryELnp8&list=PLnu_-2Pyhu4HG9kzfObBnajnpW4ynioEF
+  image: /assets/img/dmo/layout/netflix-binge@2x.png
+  class: btn-netflix-binge
+  html_text: null
+
+- title: Movie Reviews
+  url: https://www.youtube.com/watch?v=I5gkR6BdDhA&list=PLnu_-2Pyhu4HO_obsL9AuyOxTd2aeh65g
+  image: null
+  class: btn-movie-reviews
+  html_text: <span class="movie">Movie</span><br><span class="reviews">Reviews</span>
+
+- title: Show & Tell
+  url: https://www.youtube.com/watch?v=0MuEo8OMauo&list=PLnu_-2Pyhu4FWaJmawnC31N13LbI-Ziwr
+  image: null
+  class: btn-show-and-tell
+  html_text: Show<span class="ampersand">&amp;</span>Tell
+
+#ANOTHER_NERDY_PODCAST: https://www.youtube.com/watch?v=XebwH533TuI&list=PLnu_-2Pyhu4GRBMQqo5sdDUWumAQn0x64
+#REACTION: https://www.youtube.com/watch?v=5Iok9GBWkpo&list=PLnu_-2Pyhu4Hcev1V3LOObngv1sBTbfuV
+#TOP_TEN: https://www.youtube.com/watch?v=FgsT1xY4q40&list=PLnu_-2Pyhu4GpK6lGu8j6J5zj7gAMRohM

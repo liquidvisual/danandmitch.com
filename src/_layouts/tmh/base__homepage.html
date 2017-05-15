@@ -7,25 +7,36 @@ layout: base
 
 {% include tmh/hero.html %}
 
+{% assign playlists = site.data.tmh.playlists %}
+
 <!-- COUCH MAN -->
 <div class="couch-man">
 	<div class="container rel">
 		<img class="img" src="/assets/img/tmh/layout/couch-man@2x.png" alt="Couch Man">
-	</div> <!-- /.container -->
-</div> <!-- /.couch-man -->
+	</div>
+</div>
 
-<!-- NAV CHANNEL -->
+<!-- NAV CHANNELS -->
 <nav class="nav-channels">
 	<div class="container">
 		<ul class="block-grid-xs-1 block-grid-md-3 block-grid-lg-6 block-grid-xl-6">
-			<li><a target="_blank" class="btn btn-movie-night btn-channel" href="{{ settings.playlists_tmh.MOVIE_NIGHT }}"></a></li>
-			<li><a target="_blank" class="btn btn-journey-into-childhood btn-channel" href="{{ settings.playlists_tmh.JOURNEY_INTO_CHILDHOOD }}"></a></li>
-			<li><a target="_blank" class="btn btn-midnight-games btn-channel" href="{{ settings.playlists_tmh.MIDNIGHT_GAMES }}"></a></li>
-			<li><a target="_blank" class="btn btn-the-vault-of-filler btn-channel" href="{{ settings.playlists_tmh.THE_VAULT_OF_FILLER }}"></a></li>
-			<li><a target="_blank" class="btn btn-up-2-snuff btn-channel" href="{{ settings.playlists_tmh.UP_2_SNUFF }}"></a></li>
-			<li><a target="_blank" class="btn btn-evil-read btn-channel" href="{{ settings.playlists_tmh.EVIL_READ }}"></a></li>
+			{% for item in playlists | limit: 6 %}
+				<li>
+					<a class="atvImg {{ item.class }}" target="_self" href="{{ item.url }}">
+						<!-- <img width="100%" src="http://placehold.it/700x360"> -->
+						<div class="atvImg-layer is-bg"></div>
+						<div class="atvImg-layer is-static" data-img="/assets/img/tmh/layout/static-4.gif"></div>
+						<div class="atvImg-layer is-fg" data-img="{{ item.image }}"></div>
+					</a>
+				</li>
+			{% endfor %}
 		</ul>
 	</div>
+
+	<!-- NO JAVASCRIPT WARNING -->
+	<noscript>
+		<h3 class="text-center"><i class="fa fa-warning"></i> Playlists can't load without JavaScript</h3>
+	</noscript>
 </nav>
 
 {% comment %}

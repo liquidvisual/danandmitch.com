@@ -171,70 +171,144 @@ body.theme-tmh {
 
 .theme-tmh {
 
-	.btn-movie-night,
-	.btn-journey-into-childhood,
-	.btn-midnight-games,
-	.btn-the-vault-of-filler,
-	.btn-up-2-snuff,
-	.btn-evil-read {
-		@include media-breakpoint-down(sm) {
-		    background-size: 80% !important;
-		    background-position: left -10px !important;
+	.atvImg-container.over .atvImg-shadow {
+	    // box-shadow: 0 45px 100px rgba(black,0.2), 0 16px 40px rgba(black,0.2);
+	}
+
+	.atvImg-shadow {
+	    box-shadow: 0 8px 30px rgba(black,0.4);
+	}
+
+	// .btn-movie-night,
+	// .btn-journey-into-childhood,
+	// .btn-midnight-games,
+	// .btn-the-vault-of-filler,
+	// .btn-up-2-snuff,
+	// .btn-evil-read {
+	// 	@include media-breakpoint-down(sm) {
+	// 	    background-size: 80% !important;
+	// 	    background-position: left -10px !important;
+	// 	}
+	// }
+
+	// .btn-movie-night {
+	// 	background: $brand-secondary-tmh url(/assets/img/tmh/layout/thumbs-TMH/movie-night@2x.png) center center no-repeat;
+	// 	background-size: 100%;
+	// 	border-bottom: 4px solid darken($brand-secondary-tmh, 15%);
+	// 	text-indent: -9999px;
+	// 	&:hover { background-color: lighten($brand-secondary-tmh, 5%); }
+	// 	// &:active { background-image: url(/assets/img/tmh/layout/thumbs-TMH/thumb-1@2x.png); background-size: calc(90% + 2px); background-position: bottom; }
+	// }
+
+	.btn-movie-night {
+		.atvImg-layers .atvImg-rendered-layer:first-child {
+		    background-color: $brand-secondary-tmh;
+		}
+
+		.atvImg-layers {
+		    border-bottom: 4px solid darken($brand-secondary-tmh, 15%);
 		}
 	}
 
-	.btn-movie-night {
-		background: $brand-secondary-tmh url(/assets/img/tmh/layout/thumbs-TMH/movie-night@2x.png) center center no-repeat;
-		background-size: 100%;
-		border-bottom: 4px solid darken($brand-secondary-tmh, 15%);
-		text-indent: -9999px;
-		&:hover { background-color: lighten($brand-secondary-tmh, 5%); }
-		// &:active { background-image: url(/assets/img/tmh/layout/thumbs-TMH/thumb-1@2x.png); background-size: calc(90% + 2px); background-position: bottom; }
-	}
+	// .btn-journey-into-childhood {
+	// 	background: $brand-tertiary-tmh url(/assets/img/tmh/layout/thumbs-TMH/journey-into-childhood@2x.png) center center no-repeat;
+	// 	background-size: 100%;
+	// 	border-bottom: 4px solid darken($brand-tertiary-tmh, 15%);
+	// 	text-indent: -9999px;
+	// 	&:hover { background-color: lighten($brand-tertiary-tmh, 5%); }
+	// 	// &:active { background-image: url(/assets/img/tmh/layout/thumbs-TMH/thumb-1@2x.png); background-size: calc(90% + 2px); background-position: bottom; }
+	// }
 
 	.btn-journey-into-childhood {
-		background: $brand-tertiary-tmh url(/assets/img/tmh/layout/thumbs-TMH/journey-into-childhood@2x.png) center center no-repeat;
-		background-size: 100%;
-		border-bottom: 4px solid darken($brand-tertiary-tmh, 15%);
-		text-indent: -9999px;
-		&:hover { background-color: lighten($brand-tertiary-tmh, 5%); }
-		// &:active { background-image: url(/assets/img/tmh/layout/thumbs-TMH/thumb-1@2x.png); background-size: calc(90% + 2px); background-position: bottom; }
+		.atvImg-layers .atvImg-rendered-layer:first-child {
+		    background-color: $brand-tertiary-tmh;
+		}
+
+		.atvImg-layers {
+		    border-bottom: 4px solid darken($brand-tertiary-tmh, 15%);
+		}
 	}
+
+	// .btn-midnight-games {
+	// 	background: $brand-quaternary-tmh url(/assets/img/tmh/layout/thumbs-TMH/midnight-games@2x.png) center center no-repeat;
+	// 	background-size: 100%;
+	// 	border-bottom: 4px solid darken($brand-quaternary-tmh, 15%);
+	// 	text-indent: -9999px;
+	// 	&:hover { background-color: lighten($brand-quaternary-tmh, 5%); }
+	// 	// &:active { background-image: url(/assets/img/tmh/layout/thumbs-TMH/thumb-1@2x.png); background-size: calc(90% + 2px); background-position: bottom; }
+	// }
 
 	.btn-midnight-games {
-		background: $brand-quaternary-tmh url(/assets/img/tmh/layout/thumbs-TMH/midnight-games@2x.png) center center no-repeat;
-		background-size: 100%;
-		border-bottom: 4px solid darken($brand-quaternary-tmh, 15%);
-		text-indent: -9999px;
-		&:hover { background-color: lighten($brand-quaternary-tmh, 5%); }
-		// &:active { background-image: url(/assets/img/tmh/layout/thumbs-TMH/thumb-1@2x.png); background-size: calc(90% + 2px); background-position: bottom; }
+		.atvImg-layers .atvImg-rendered-layer:first-child {
+		    background-color: $brand-quaternary-tmh;
+		}
+
+		.atvImg-layers {
+		    border-bottom: 4px solid darken($brand-quaternary-tmh, 15%);
+		}
 	}
+
+	// .btn-the-vault-of-filler {
+	// 	background: $brand-quinary-tmh url(/assets/img/tmh/layout/thumbs-TMH/the-vault-of-filler@2x.png) center center no-repeat;
+	// 	background-size: 100%;
+	// 	border-bottom: 4px solid darken($brand-quinary-tmh, 15%);
+	// 	text-indent: -9999px;
+	// 	&:hover { background-color: lighten($brand-quinary-tmh, 5%); }
+	// 	// &:active { background-image: url(/assets/img/tmh/layout/thumbs-TMH/thumb-1@2x.png); background-size: calc(90% + 2px); background-position: bottom; }
+	// }
 
 	.btn-the-vault-of-filler {
-		background: $brand-quinary-tmh url(/assets/img/tmh/layout/thumbs-TMH/the-vault-of-filler@2x.png) center center no-repeat;
-		background-size: 100%;
-		border-bottom: 4px solid darken($brand-quinary-tmh, 15%);
-		text-indent: -9999px;
-		&:hover { background-color: lighten($brand-quinary-tmh, 5%); }
-		// &:active { background-image: url(/assets/img/tmh/layout/thumbs-TMH/thumb-1@2x.png); background-size: calc(90% + 2px); background-position: bottom; }
+		.atvImg-layers .atvImg-rendered-layer:first-child {
+		    background-color: $brand-quinary-tmh;
+		}
+
+		.atvImg-layers {
+		    border-bottom: 4px solid darken($brand-quinary-tmh, 15%);
+		}
+
+		&:hover {
+			.atvImg-layers .atvImg-rendered-layer:first-child {
+			    background-color: lighten(saturate($brand-quinary-tmh, 15%), 5%);
+			}
+		}
 	}
+
+	// .btn-up-2-snuff {
+	// 	background: $brand-septenary-tmh url(/assets/img/tmh/layout/thumbs-TMH/up-2-snuff@2x.png) center center no-repeat;
+	// 	background-size: 100%;
+	// 	border-bottom: 4px solid #836150; //darken($brand-septenary-tmh, 15%);
+	// 	text-indent: -9999px;
+	// 	&:hover { background-color: lighten($brand-septenary-tmh, 5%); }
+	// 	// &:active { background-image: url(/assets/img/tmh/layout/thumbs-TMH/thumb-1@2x.png); background-size: calc(90% + 2px); background-position: bottom; }
+	// }
 
 	.btn-up-2-snuff {
-		background: $brand-septenary-tmh url(/assets/img/tmh/layout/thumbs-TMH/up-2-snuff@2x.png) center center no-repeat;
-		background-size: 100%;
-		border-bottom: 4px solid #836150; //darken($brand-septenary-tmh, 15%);
-		text-indent: -9999px;
-		&:hover { background-color: lighten($brand-septenary-tmh, 5%); }
-		// &:active { background-image: url(/assets/img/tmh/layout/thumbs-TMH/thumb-1@2x.png); background-size: calc(90% + 2px); background-position: bottom; }
+		.atvImg-layers .atvImg-rendered-layer:first-child {
+		    background-color: $brand-septenary-tmh;
+		}
+
+		.atvImg-layers {
+		    border-bottom: 4px solid #836150; //darken($brand-septenary-tmh, 15%);
+		}
 	}
 
+	// .btn-evil-read {
+	// 	background: $brand-octonary-tmh url(/assets/img/tmh/layout/thumbs-TMH/evil-read@2x.png) center center no-repeat;
+	// 	background-size: 100%;
+	// 	border-bottom: 4px solid #484848; //darken($brand-octonary-tmh, 15%);
+	// 	text-indent: -9999px;
+	// 	&:hover { background-color: lighten($brand-octonary-tmh, 5%); }
+	// 	// &:active { background-image: url(/assets/img/tmh/layout/thumbs-TMH/thumb-1@2x.png); background-size: calc(90% + 2px); background-position: bottom; }
+	// }
+
 	.btn-evil-read {
-		background: $brand-octonary-tmh url(/assets/img/tmh/layout/thumbs-TMH/evil-read@2x.png) center center no-repeat;
-		background-size: 100%;
-		border-bottom: 4px solid #484848; //darken($brand-octonary-tmh, 15%);
-		text-indent: -9999px;
-		&:hover { background-color: lighten($brand-octonary-tmh, 5%); }
-		// &:active { background-image: url(/assets/img/tmh/layout/thumbs-TMH/thumb-1@2x.png); background-size: calc(90% + 2px); background-position: bottom; }
+		.atvImg-layers .atvImg-rendered-layer:first-child {
+		    background-color: $brand-octonary-tmh;
+		}
+
+		.atvImg-layers {
+		    border-bottom: 4px solid #484848; //darken($brand-octonary-tmh, 15%);
+		}
 	}
 }
 
