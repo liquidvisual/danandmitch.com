@@ -96,6 +96,14 @@
 }
 
 //-----------------------------------------------------------------
+// 05. COUCH MAN MOBILE FLICKER - TMH
+//-----------------------------------------------------------------
+
+.has-loaded .theme-tmh .couch-man-mobile {
+	animation: mobile-flicker 4s ease 0s alternate infinite forwards;
+}
+
+//-----------------------------------------------------------------
 // KEYFRAMES
 //-----------------------------------------------------------------
 
@@ -121,6 +129,22 @@
   50% { transform: scale(1.2); opacity: 1; }
   70% { transform: scale(.9); opacity: 1; }
   100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes mobile-flicker {
+    0%   { background: #8dadbb; }
+    9%   { background: #8dadbb; }
+    10%   { background: #333; }
+    25%   { background: #333; }
+    26%   { background: #8dadbb; }
+    49%   { background: #8dadbb; }
+    50%   { background: #333; }
+    74%   { background: #333; }
+    75%   { background: #8dadbb; }
+    94%   { background: #8dadbb; }
+    95%   { background: #333; }
+    99% { background: #8dadbb; }
+    100% { background: #8dadbb; }
 }
 
 //-----------------------------------------------------------------

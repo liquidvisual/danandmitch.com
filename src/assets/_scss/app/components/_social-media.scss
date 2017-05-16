@@ -48,6 +48,10 @@
 		&:hover {
 			color: darken($gray, 25%);
 			transform: scale(1.0);
+
+			&:after {
+				transform: rotate(0deg) translate(3px, -14px);
+			}
 		}
 	}
 
@@ -68,6 +72,7 @@
 		top: 52px;
 		left: 55px;
 		transform: rotate(-16deg);
+		z-index: 1;
 	}
 
 	.twitter {
