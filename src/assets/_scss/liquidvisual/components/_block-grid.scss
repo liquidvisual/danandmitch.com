@@ -27,6 +27,9 @@ $grid-gutter-width: 30px !default;
   padding: 0;
   list-style: none;
   overflow: hidden; // fixes issue with IE
+
+  margin-top: 0; // is this right?
+  margin-bottom: 0; // is this right?
 }
 
 [class*="block-grid-"] > li,
@@ -69,8 +72,8 @@ $grid-gutter-width: 30px !default;
 //=========================================
 
 @mixin set-margins($unit) {
-  margin-top: $unit; // fixed!
-  margin-bottom: $unit;
+  // margin-top: $unit; // fixed!
+  // margin-bottom: $unit;
 }
 
 //=========================================

@@ -96,11 +96,34 @@
 }
 
 //-----------------------------------------------------------------
-// 05. COUCH MAN MOBILE FLICKER - TMH
+// 001. COUCH MAN MOBILE FLICKER - TMH
 //-----------------------------------------------------------------
 
 .has-loaded .theme-tmh .couch-man-mobile {
 	animation: mobile-flicker 4s ease 0s alternate infinite forwards;
+}
+
+//-----------------------------------------------------------------
+// 002. COUCH MAN BLOOD POOL - TMH
+//-----------------------------------------------------------------
+
+.has-loaded .theme-tmh .couch-man-blood-pool {
+    animation: blood-pool 30s ease 0s alternate forwards;
+    transform-origin: top;
+
+    @include media-breakpoint-up(md) {
+        animation: blood-pool-md-up 30s ease 0s alternate forwards;
+        transform-origin: center;
+    }
+}
+
+.couch-man-blood-pool-ripple:before,
+.couch-man-blood-pool-ripple:after {
+   animation: blood-pool-ripple 1.3s linear 0s infinite;
+}
+
+.couch-man-blood-pool-ripple:after {
+   animation: blood-pool-ripple 1.3s linear 0.9s infinite;
 }
 
 //-----------------------------------------------------------------
@@ -145,6 +168,28 @@
     95%   { background: #333; }
     99% { background: #8dadbb; }
     100% { background: #8dadbb; }
+}
+
+// Pool drips downwards on mobile
+@keyframes blood-pool {
+    0% { transform: scale(0.1,1); }
+    100% { transform: scale(0.1,85); }
+}
+
+@keyframes blood-pool-md-up {
+    0% { transform: scale(1,1); }
+    100% { transform: scale(2.4,1.1); }
+}
+
+@keyframes blood-pool-ripple {
+    0%   {
+       transform: scale(0);
+       opacity: 1;
+   }
+    100% {
+       transform: scale(2);
+       opacity: 0;
+   }
 }
 
 //-----------------------------------------------------------------

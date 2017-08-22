@@ -2,7 +2,7 @@
 layout: tmh/base__homepage
 title: The Mitching Hour
 permalink: /the-mitching-hour/
-theme: theme-tmh
+theme: theme-home theme-tmh
 ---
 
 <div class="container">

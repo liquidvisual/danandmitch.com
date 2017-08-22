@@ -24,6 +24,31 @@
 //-----------------------------------------------------------------
 //
 //-----------------------------------------------------------------
+
+.section {
+	padding: $spacer*3 0;
+	// background: url(/assets/img/tmh/layout/section-bg.png) no-repeat;
+	// background-size: cover;
+	color: #e1e1e1;
+	background: rgba(black, 0.1);
+
+	p {
+		font-size: rem-calc(18);
+	}
+
+
+	h1 {
+		text-transform: uppercase;
+		color: white;
+		font-weight: bold;
+		line-height: 0.9;
+	}
+}
+
+.section-write-in {
+	background: #ae0b1b;
+}
+
 //=========================================
 //
 //=========================================

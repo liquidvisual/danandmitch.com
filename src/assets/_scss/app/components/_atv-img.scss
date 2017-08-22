@@ -15,23 +15,14 @@ $border-radius: $border-radius;
 //-----------------------------------------------------------------
 
 .atvImg {
-    transition: transform 300ms ease;
-
-    &:hover {
-        transform: scale(1.11);
-    }
-}
-
-//-----------------------------------------------------------------
-// ATV IMG
-//-----------------------------------------------------------------
-
-.atvImg {
-    display: inline-block;
-    width: 100%;
-    height: rem-calc(94); // was 90???
+    display: block;
     transform-style: preserve-3d;
     -webkit-tap-highlight-color: rgba(black,0);
+
+    @include media-breakpoint-up(md) {
+        // width: 100%;
+        height: rem-calc(94); // was 90???
+    }
 
     //=========================================
     // IMG
@@ -65,6 +56,10 @@ $border-radius: $border-radius;
     transition: all 0.2s ease-out;
 }
 
+//=========================================
+// CONTAINER HOVERS
+//=========================================
+
 .atvImg-container.over .atvImg-shadow {
     // box-shadow: 0 45px 100px rgba(black,0.4), 0 16px 40px rgba(black,0.4); // bad for firefox
     // opacity: 1;
@@ -72,25 +67,8 @@ $border-radius: $border-radius;
     transform: scale(1);
 }
 
-//=========================================
-// STATIC EFFECT
-//=========================================
-
-.atvImg-rendered-layer.is-static {
-    opacity: 0;
-}
-
 .atvImg-container.over .atvImg-rendered-layer.is-static {
     opacity: 0.15;
-}
-
-.atvImg-layers .atvImg-rendered-layer.is-fg {
-    background-size: cover;
-    background-position: bottom center;
-
-    @include media-breakpoint-up(md) {
-        background-size: contain;
-    }
 }
 
 //-----------------------------------------------------------------
@@ -111,6 +89,9 @@ $border-radius: $border-radius;
 //-----------------------------------------------------------------
 
 .atvImg-rendered-layer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     width: 104%;
     height: 104%;
@@ -122,9 +103,27 @@ $border-radius: $border-radius;
     background-size: cover;
     transition: all 0.1s ease-out;
 
-    // image-rendering: auto;
-    // image-rendering: crisp-edges;
-    // image-rendering: pixelated;
+    //=========================================
+    // STATIC
+    //=========================================
+
+    &.is-static {
+        opacity: 0;
+    }
+
+    //=========================================
+    // FOREGROUND
+    //=========================================
+
+    &.is-fg {
+        background-size: rem-calc(175); // force best rendering
+        background-position: bottom center;
+
+        // image-rendering: -webkit-optimize-contrast;
+        // image-rendering: auto;
+        // image-rendering: crisp-edges;
+        // image-rendering: pixelated;
+    }
 }
 
 //-----------------------------------------------------------------

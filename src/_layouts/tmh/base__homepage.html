@@ -8,25 +8,13 @@ layout: base
 
 {% include tmh/hero.html %}
 
-<!-- COUCH MAN -->
-<div class="couch-man">
-	<div class="container rel">
-		<div class="img">
-			<img src="/assets/img/tmh/layout/couch-man-no-spiders@2x.png" alt="Couch Man">
-			<span class="couch-man-mobile"></span>
-			<span class="couch-man-spider-1"></span>
-			<span class="couch-man-spider-2"></span>
-		</div>
-	</div>
-</div>
-
 <!-- CHANNELS -->
-<nav class="nav-channels">
+<nav class="nav-channels" data-detect-dpi>
 	<div class="container">
-		<ul class="block-grid-xs-1 block-grid-md-3 block-grid-lg-6 block-grid-xl-6">
+		<ul class="list-scroller block-grid-xs-1 block-grid-sm-2 block-grid-md-3 block-grid-lg-6 block-grid-xl-6">
 			{% for item in channels | limit: 6 %}
 				<li>
-					<a class="atvImg {{ item.class }}" target="_self" href="{{ item.url }}">
+					<a class="atvImg btn-channel {{ item.class }}" target="_self" href="{{ item.url }}">
 						<img width="100%" src="{{ item.image }}" alt="{{ item.title }}">
 						<div class="atvImg-layer is-bg"></div>
 						<div class="atvImg-layer is-static" data-img="/assets/img/tmh/layout/static-4.gif"></div>
@@ -37,3 +25,37 @@ layout: base
 		</ul>
 	</div>
 </nav>
+
+<!-- SECTION -->
+<section class="section">
+	<div class="container">
+		<div class="row">
+			<div class="col-6">
+				<h1 class="display-1">Awaken Your Inner Creep</h1>
+				<h2>You Creeper!</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="col-6">
+				<img width="100%" src="/assets/img/tmh/layout/section-bg.png">
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- WRITE IN -->
+<section class="section section-write-in">
+	<div class="container">
+		<div class="row">
+			<div class="col-8">
+				<h2 class="display-1">Newsletter Signup</h2>
+
+			</div>
+		</div>
+	</div>
+</section>
+

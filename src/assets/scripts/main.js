@@ -43,35 +43,6 @@ function launchParallax() {
     });
 }
 
-// CHANNELS
-// var target = $('.btn-parallax')[0];
-// var parallax = new Parallax(target, {
-//     limitX: 10,
-//     limitY: 10,
-//     relativeInput: true,
-//     hoverOnly: true,
-//     // clipRelativeInput: true
-// });
-
-
-
-// BOOKS
-// var target = $('.has-parallax')[0];
-// var parallax = new Parallax(target, {
-//     limitX: 10,
-//     limitY: 10,
-//     relativeInput: true,
-//     hoverOnly: true
-// });
-
-// BOOK HTML
-// <span class="book has-parallax">
-//     <img class="bg layer" data-depth="0.8" width="100%"  alt="Mal Winter and the Cloud Runners">
-//     <img class="fg layer" data-depth="1.0" width="100%" alt="Mal Winter and the Cloud Runners">
-//     <a href="/store/" class="btn-price-sticker layer" data-depth="1.4"><span class="dollar-sign">$</span>3</a>
-//     <span class="book-shadow layer" data-depth="0.5"></span>
-// </span>
-
 //-----------------------------------------------------------------
 // LAUNCH MANAGE ON KEYPRESS
 //-----------------------------------------------------------------

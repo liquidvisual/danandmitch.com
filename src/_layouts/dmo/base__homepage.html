@@ -31,7 +31,7 @@ layout: base
 <!-- NAV CHANNELS -->
 <nav class="nav-channels">
 	<div class="container">
-		<ul class="block-grid-xs-1 block-grid-md-3 block-grid-lg-6 block-grid-xl-6">
+		<ul class="list-scroller block-grid-xs-6 block-grid-md-3 block-grid-lg-6">
 			{% for item in channels | limit: 6 %}
 				<li>
 					<a class="atvImg btn-channel {{ item.class }}" target="_self" href="{{ item.url }}">

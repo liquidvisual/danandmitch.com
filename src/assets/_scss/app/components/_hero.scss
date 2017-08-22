@@ -12,7 +12,10 @@ $hero-md-height:            auto          !default;
 $hero-md-height-fixed:      100vh         !default;
 $hero-lg-height:            rem-calc(600) !default;
 $nav-channel-height:        rem-calc(210) !default;
-$hero-caption-sm-height:    rem-calc(240) !default;
+
+$hero-sm-height-preset-1:   auto; // Appears on product landing
+$hero-md-height-preset-1:   rem-calc(300);
+$hero-lg-height-preset-1:   rem-calc(300);
 
 //-----------------------------------------------------------------
 // HERO WRAPPER
@@ -38,7 +41,51 @@ $hero-caption-sm-height:    rem-calc(240) !default;
         height: $hero-lg-height;
     }
 
-    // INSERT HEIGHT PRESET
+    //=========================================
+    // HAS HEIGHT PRESET 1
+    //=========================================
+
+    &.has-height-preset-1 {
+        height: $hero-sm-height-preset-1;
+
+        @include media-breakpoint-up(md) { // added - refactor
+           height: $hero-md-height-preset-1;
+        }
+
+        @include media-breakpoint-up(lg) {
+            height: $hero-lg-height-preset-1;
+        }
+    }
+}
+
+//-----------------------------------------------------------------
+// HAS WALLPAPER
+//-----------------------------------------------------------------
+
+.lv-hero.has-wallpaper {
+    background: darken(#cdcccc, 6%); //url(/assets/img/dmo/content/danandmitch/soft-bg.png) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    // border-bottom: 1px solid #cdcccc;
+
+    .lv-hero-wallpaper {
+        position: absolute;
+        bottom: 0;
+        left: -50%;
+        width: 400%;
+        height: 1000%;
+        background: url(/assets/img/dmo/layout/icons-wallpaper.png) repeat top left;
+        background-size: 1170px;
+        transform: rotate(10deg) translate(0, 0);
+        transform-origin: 0 0;
+        animation: wallpaper-scroller 130s linear infinite;
+        // opacity: 0.6;
+    }
+}
+
+@keyframes wallpaper-scroller {
+    from { transform: rotate(10deg) translate(0, 0); }
+    to { transform: rotate(10deg) translate(0, 80%); }
 }
 
 //-----------------------------------------------------------------
@@ -49,7 +96,7 @@ $hero-caption-sm-height:    rem-calc(240) !default;
     > .pull-lg-6 {
         @include media-breakpoint-up(lg) {
             padding-right: rem-calc(70);
-            // background: aqua;
+            // background: rgba(aqua, 0.3);
         }
     }
 }
@@ -75,9 +122,14 @@ $hero-caption-sm-height:    rem-calc(240) !default;
 .lv-hero-item-caption {
     position: relative;
     height: $hero-caption-sm-height;
+    // top: rem-calc(20);
+    top: rem-calc(90); // decision
+
+    @include media-breakpoint-up(sm) {
+        top: rem-calc(70); // corresponds to absolute logo
+    }
 
     @include media-breakpoint-up(md) {
-        top: $spacer-y*2;
         height: $hero-caption-md-height;
     }
 

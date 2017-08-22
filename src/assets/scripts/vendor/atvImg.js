@@ -17,7 +17,21 @@
 //-----------------------------------------------------------------
 
 $(function() {
-    atvImg();
+
+    // REPLACE HI-DPI WITH STANDARD
+    // var query = "(-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+
+    // if (!matchMedia(query).matches) {
+    //     $('[data-detect-dpi] .atvImg').each(function(){
+    //           var $this = $(this);
+    //           var $foreground = $this.find('.is-fg');
+    //           var downScaledImgSrc = $foreground.data('img').replace('@2x', '');
+    //           $foreground.attr('data-img', downScaledImgSrc);
+    //     });
+    // }
+
+    //--
+    if ($(window).width() >= 768) atvImg();
 });
 
 //-----------------------------------------------------------------

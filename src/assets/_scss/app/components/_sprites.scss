@@ -13,7 +13,9 @@
 
 .character-sprites-wrapper {
 	position: absolute;
-	top: calc(#{$header-sm-height} + #{$spacer-y*2} + #{$hero-caption-sm-height});
+	// top: calc(#{$header-sm-height} + #{$spacer-y*2} + #{$hero-caption-sm-height});
+	top: calc(#{$header-sm-height}  + #{$hero-caption-sm-height});
+	// top: rem-calc(426);
 	width: 100%;
 	font-size: rem-calc(11);
 
@@ -22,7 +24,9 @@
 	}
 
 	@include media-breakpoint-up(md) {
-	    top: calc(#{$header-sm-height} + #{$spacer-y*2} + #{$hero-caption-md-height});
+		// top: calc(#{$header-sm-height} + #{$spacer-y*2} + #{$hero-caption-md-height});
+	    top: calc(#{$header-sm-height} + #{$hero-caption-md-height});
+	    // top: rem-calc(350);
 	    font-size: rem-calc(16);
 	}
 

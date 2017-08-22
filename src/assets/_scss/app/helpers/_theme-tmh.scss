@@ -1,0 +1,468 @@
+/*
+    THEME-TMH.CSS
+
+    - Last updated: 17.05.20
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// THEMES
+//-----------------------------------------------------------------
+
+.theme-tmh .lv-page {
+	position: relative;
+	background-image: url(/assets/img/tmh/layout/dark-bg-2.png) !important;
+	background-size: 200%;
+	background-color: $gray-tmh;
+	z-index: 1;
+
+	@include media-breakpoint-up(lg) {
+		background-size: cover;
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url(/assets/img/ui/grain@2x.png);
+		background-size: 100px;
+		opacity: 0.4;
+		z-index: -1;
+	}
+}
+
+.theme-tmh .site-tagline {
+	color: white;
+}
+
+body.theme-tmh {
+	color: #989FB2;
+}
+
+//-----------------------------------------------------------------
+// LOADER
+//-----------------------------------------------------------------
+
+.theme-tmh .lv-page-loader {
+	background: $gray-dark-tmh;
+
+	.lv-spinner-dot-1 {
+	  background-color: $brand-primary-tmh; //#333;
+	}
+	.lv-spinner-dot-2 {
+	  background-color: rgba($brand-primary-tmh, 0.8); //#333;
+	}
+}
+
+//-----------------------------------------------------------------
+// HEADER
+//-----------------------------------------------------------------
+
+.theme-tmh .global-header .logo {
+
+	img {
+		// width: rem-calc(80);
+
+		@include media-breakpoint-up(md) {
+			width: rem-calc(270);
+			       // padding: rem-calc(15 0);
+		}
+
+		@include media-breakpoint-up(lg) {
+			margin-top: -10px;
+		           // padding: none;
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// HERO - OFFSET MEDIA - LOOKS WEIRD ON TMH
+//-----------------------------------------------------------------
+
+// .lv-hero-homepage > .lv-hero-item > .container > .row {
+//     > .push-lg-6 {
+//         @include media-breakpoint-up(lg) {
+//         	position: relative;
+//             padding-right: rem-calc(70);
+//             // background: aqua;
+//         }
+//     }
+// }
+
+//-----------------------------------------------------------------
+// HERO CAPTION - cancel the dmo absolute layering
+//-----------------------------------------------------------------
+
+.theme-tmh .lv-hero-item-caption {
+    @include media-breakpoint-down(md) {
+        position: static;
+        height: auto;
+        padding-top: rem-calc(150);
+    }
+
+    @include media-breakpoint-up(lg) {
+        top: $spacer-y * 10.5; // magic
+    }
+}
+
+//-----------------------------------------------------------------
+// COUCH MAN
+//-----------------------------------------------------------------
+
+.theme-tmh .couch-man {
+
+	//=========================================
+	// IMG CONTAINER
+	//=========================================
+
+	.img {
+		display: inline-block;
+		position: relative;
+		// background: rgba(red, 0.3);
+		font-size: rem-calc(12);
+
+		@include media-breakpoint-up(md) {
+		    font-size: rem-calc(16);
+		}
+
+	    //=========================================
+	    // IMG
+	    //=========================================
+
+	    img {
+	    	width: em-calc(400);
+	    }
+
+	    //=========================================
+	    // SPIDERS
+	    //=========================================
+
+		.couch-man-spider-1,
+		.couch-man-spider-2 {
+			position: absolute;
+			top: em-calc(26);
+			left: em-calc(240);
+			width: em-calc(80);
+			height: em-calc(80);
+			background: url(/assets/img/tmh/layout/spider-2b@2x.gif) no-repeat;
+			background-size: contain;
+			// border: 1px solid red;
+		}
+
+		.couch-man-spider-2 {
+			top: em-calc(41.8);
+			left: em-calc(14);
+			width: em-calc(70);
+			height: em-calc(70);
+			background: url(/assets/img/tmh/layout/spider-1a@2x.gif) no-repeat;
+			background-size: contain;
+		}
+
+	    //=========================================
+	    // MOBILE
+	    //=========================================
+
+	    .couch-man-mobile {
+	    	position: absolute;
+	    	bottom: em-calc(5);
+	    	left: em-calc(160);
+	    	width: em-calc(12);
+	    	height: em-calc(20);
+	    	background: #8dadbb;
+	    	z-index: -1;
+	    	transform: skew(26deg);
+	    }
+
+	    //=========================================
+	    // BLOOD POOL
+	    //=========================================
+
+	    .couch-man-blood-pool {
+	    	position: absolute;
+	    	bottom: 0;
+	    	left: em-calc(15);
+	    	width: em-calc(64);
+	    	height: em-calc(12);
+	    	background: url(/assets/img/tmh/layout/couch-man-blood-pool.svg) no-repeat;
+	    	background-size: contain;
+	    	z-index: -3;
+
+	    	@include media-breakpoint-up(md) {
+	    	    left: em-calc(23);
+	    	    bottom: em-calc(5);
+	    	}
+	    }
+
+	    //=========================================
+	    // WATER RIPPLE
+	    //=========================================
+
+	    .couch-man-blood-pool-ripple {
+			position: absolute;
+			left: em-calc(50);
+			bottom: em-calc(14.5);
+			opacity: 0.3;
+	    }
+
+	    .couch-man-blood-pool-ripple:before,
+	    .couch-man-blood-pool-ripple:after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: "";
+			width: em-calc(14);
+			height: em-calc(4);
+			// background: rgba(white, 0.1);
+			border: 1px solid white;
+			border-radius: 100%;
+			transform: scale(0);
+	    }
+	}
+}
+
+//-----------------------------------------------------------------
+// SOCIAL MEDIA
+//-----------------------------------------------------------------
+
+.theme-tmh .social-media {
+	a {
+		color: black;
+	}
+
+	.twitter,
+	.facebook,
+	.instagram,
+	.youtube {
+		&:hover {
+			color: lighten(black, 10%);
+		}
+	}
+
+	.facebook {
+		&:after {
+			content: "";
+			position: absolute;
+			top: rem-calc(50);
+			left: rem-calc(-3);
+			width: rem-calc(12.5);
+			height: rem-calc(43);
+			background: url(/assets/img/tmh/layout/micro-drip.svg) no-repeat;
+			background-size: 100%;
+			transform: rotate(15deg);
+			transition: transform 1000ms ease;
+			z-index: -1;
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// NAV
+//-----------------------------------------------------------------
+
+.theme-tmh .nav-channels,
+.theme-tmh .nav-channels:after {
+	background: rgba(black, 0.09);
+}
+
+.theme-tmh .nav-channels {
+	@include media-breakpoint-up(lg) {
+	    height: $nav-channel-height + 2;
+	}
+}
+
+//-----------------------------------------------------------------
+// BUTTONS
+//-----------------------------------------------------------------
+
+.theme-tmh {
+
+	.atvImg-container.over .atvImg-shadow {
+	    opacity: 0.6;
+	    transform: scale(1);
+	}
+
+	.atvImg-shadow {
+	    box-shadow: 0 8px 30px rgba(black,0.4);
+	}
+	//=========================================
+	// MOVIE NIGHT
+	//=========================================
+
+	.btn-movie-night {
+
+		// MOBILE FALLBACK - img removed by JS
+		img {
+			@include media-breakpoint-down(sm) {
+			    background-color: $brand-quaternary;
+			    border-bottom: 4px solid darken($brand-quaternary, 15%);
+			}
+		}
+
+		.atvImg-layers .atvImg-rendered-layer.is-bg {
+		    background-color: $brand-secondary-tmh;
+		}
+
+		.atvImg-layers {
+		    border-bottom: 4px solid darken($brand-secondary-tmh, 15%);
+		}
+	}
+	//=========================================
+	// JOURNEY INTO CHILDHOOD
+	//=========================================
+
+	.btn-journey-into-childhood {
+
+		// MOBILE FALLBACK - img removed by JS
+		img {
+			@include media-breakpoint-down(sm) {
+			    background-color: $brand-tertiary-tmh;
+			    border-bottom: 4px solid darken($brand-tertiary-tmh, 15%);
+			}
+		}
+
+		.atvImg-layers .atvImg-rendered-layer.is-bg {
+		    background-color: $brand-tertiary-tmh;
+		}
+
+		.atvImg-layers {
+		    border-bottom: 4px solid darken($brand-tertiary-tmh, 15%);
+		}
+	}
+	//=========================================
+	// MIDNIGHT GAMES
+	//=========================================
+
+	.btn-midnight-games {
+
+		// MOBILE FALLBACK - img removed by JS
+		img {
+			@include media-breakpoint-down(sm) {
+			    background-color: $brand-quaternary-tmh;
+			    border-bottom: 4px solid darken($brand-quaternary-tmh, 15%);
+			}
+		}
+
+		.atvImg-layers .atvImg-rendered-layer.is-bg {
+		    background-color: $brand-quaternary-tmh;
+		}
+
+		.atvImg-layers {
+		    border-bottom: 4px solid darken($brand-quaternary-tmh, 15%);
+		}
+	}
+	//=========================================
+	// VAULT OF FILLER
+	//=========================================
+
+	.btn-the-vault-of-filler {
+
+		// MOBILE FALLBACK - img removed by JS
+		img {
+			@include media-breakpoint-down(sm) {
+			    background-color: $brand-quinary-tmh;
+			    border-bottom: 4px solid darken($brand-quinary-tmh, 15%);
+			}
+		}
+
+		.atvImg-layers .atvImg-rendered-layer.is-bg {
+		    background-color: $brand-quinary-tmh;
+		}
+
+		.atvImg-layers {
+		    border-bottom: 4px solid darken($brand-quinary-tmh, 15%);
+		}
+
+		&:hover {
+			.atvImg-layers .atvImg-rendered-layer.is-bg {
+			    background-color: lighten(saturate($brand-quinary-tmh, 15%), 5%);
+			}
+		}
+	}
+	//=========================================
+	// UP TO SNUFF
+	//=========================================
+
+	.btn-up-2-snuff {
+
+		// MOBILE FALLBACK - img removed by JS
+		img {
+			@include media-breakpoint-down(sm) {
+			    background-color: $brand-septenary-tmh;
+			    border-bottom: 4px solid #836150;
+			}
+		}
+
+		.atvImg-layers .atvImg-rendered-layer.is-bg {
+		    background-color: $brand-septenary-tmh;
+		}
+
+		.atvImg-layers {
+		    border-bottom: 4px solid #836150; //darken($brand-septenary-tmh, 15%);
+		}
+	}
+	//=========================================
+	// EVIL READ
+	//=========================================
+
+	.btn-evil-read {
+		// MOBILE FALLBACK - img removed by JS
+		img {
+			@include media-breakpoint-down(sm) {
+			    background-color: $brand-octonary-tmh;
+			    border-bottom: 4px solid #484848;
+			}
+		}
+
+		.atvImg-layers .atvImg-rendered-layer.is-bg {
+		    background-color: $brand-octonary-tmh;
+		}
+
+		.atvImg-layers {
+		    border-bottom: 4px solid #484848; //darken($brand-octonary-tmh, 15%);
+		}
+	}
+}
+
+// NO JS FALLBACK -------------------------
+.no-js .btn-movie-night img {
+	background-color: $brand-secondary-tmh;
+	border-bottom: 4px solid darken($brand-secondary-tmh, 15%);
+}
+
+// NO JS FALLBACK -------------------------
+.no-js .btn-journey-into-childhood img {
+	background-color: $brand-tertiary-tmh;
+	border-bottom: 4px solid darken($brand-tertiary-tmh, 15%);
+}
+
+// NO JS FALLBACK -------------------------
+.no-js .btn-midnight-games img {
+	background-color: $brand-quaternary-tmh;
+	border-bottom: 4px solid darken($brand-quaternary-tmh, 15%);
+}
+
+// NO JS FALLBACK -------------------------
+.no-js .btn-the-vault-of-filler img {
+	background-color: $brand-quinary-tmh;
+	border-bottom: 4px solid darken($brand-quinary-tmh, 15%);
+}
+
+// NO JS FALLBACK -------------------------
+.no-js .btn-up-2-snuff img {
+	background-color: $brand-septenary-tmh;
+	border-bottom: 4px solid #836150;
+}
+
+// NO JS FALLBACK -------------------------
+.no-js .btn-evil-read img {
+	background-color: $brand-octonary-tmh;
+	border-bottom: 4px solid #484848;
+}
+//=========================================
+//
+//=========================================
