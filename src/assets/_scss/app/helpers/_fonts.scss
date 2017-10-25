@@ -21,7 +21,7 @@ $font-path: "/assets/fonts" !default;
     src: url('#{$font-path}/bebas-neue.eot');
     src: local('☺'),
         url('#{$font-path}/bebas-neue.woff') format('woff'),
-        url('#{$font-path}/bebas-neue.tff') format('truetype'),
+        url('#{$font-path}/bebas-neue.ttf') format('truetype'),
         url('#{$font-path}/bebas-neue.svg') format('svg');
 }
 
