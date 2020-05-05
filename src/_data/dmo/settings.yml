@@ -1,6 +1,6 @@
 # GLOBAL SITE SETTINGS
 
-cname: danandmitch.com
+cname: danandmitch.yourwebvisual.com
 
 # META
 title: Dan & Mitch
@@ -12,7 +12,7 @@ description: Dan & Mitch is a YouTube channel that covers Gaming, Movies and Ner
 site_tagline: "NEW SHOWS <span class='font-normal'>every</span> DECADE"
 
 # DEVELOPER
-allow_robots: true
+allow_robots: false
 github_repo_owner: liquidvisual
 github_repo_path: https://github.com/liquidvisual/danandmitch.com
 github_repo_name: danandmitch.com
